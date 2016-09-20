@@ -38,7 +38,7 @@ xPatterns
 }
 
 .logo_white {
-  background: url("../assets/branding/logo_white.svg") no-repeat center center;
+  /*background: url("../assets/branding/logo_white.svg") no-repeat center center;*/
   background-size: 100% 100%;
   width: 25%;
   height: 25%;
@@ -55,7 +55,7 @@ xPatterns
 }
 
 .logo_dark {
-  background: url("../assets/branding/logo_dark.svg") no-repeat center center;
+  /*background: url("../assets/branding/logo_dark.svg") no-repeat center center;*/
   background-size: 100% 100%;
   width: 25%;
   height: 25%;
