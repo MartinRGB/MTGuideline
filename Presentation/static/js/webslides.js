@@ -703,6 +703,7 @@ function scrollTo(y) {
   var cb = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : function () {};
   var container = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
+  
   SCROLLABLE_CONTAINER = container ? container : document.getElementById('webslides');
 
   var delta = y - SCROLLABLE_CONTAINER.scrollTop;
@@ -2308,7 +2309,9 @@ var Touch = function () {
       var info = Touch.normalizeEventInfo(event);
 
       if (this.isGesture) {
-        this.endTouches = Touch.getTouchCoordinates(event);
+        //this.endTouches = Touch.getTouchCoordinates(event);
+        this.endX_ = info.x;
+        this.endY_ = info.y;
       } else {
         this.endX_ = info.x;
         this.endY_ = info.y;

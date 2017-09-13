@@ -157,7 +157,8 @@ summary {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1; 
+}
 
 blockquote,
 q {
@@ -359,6 +360,7 @@ webslides.js will add .ws-ready automatically. Don't worry :) -- */
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
   height: 100vh;
+  min-height: 100%;
   overflow-x: hidden;
   overflow-y: scroll; }
   #webslides::-webkit-scrollbar {
@@ -374,6 +376,7 @@ a:visited,
 input:focus,
 textarea:focus,
 button {
+  outline: none;
   text-decoration: none;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out; }
@@ -487,7 +490,8 @@ figure.alignleft {
 
 pre,
 code {
-  font-family: 'Cousine', monospace; }
+  font-family: 'Cousine', monospace;
+  background:transparent !important; }
 
 pre {
   font-size: 1.6rem;
@@ -1418,6 +1422,7 @@ nav.navbar ul li {
   display: -webkit-box;
   padding: 16px 20px;
   float: left;
+  cursor: pointer;
 }
 
 @media (max-width: 568px) {
@@ -1649,7 +1654,8 @@ form[class*='bg-'] {
   text-align: center;
   width: 10rem; }
   #counter a:hover {
-    padding: .8rem; }
+    padding: .8rem; 
+  }
 
 a#next,
 a#previous {
@@ -1658,6 +1664,7 @@ a#previous {
   font-size: 2.4rem;
   height: 4rem;
   padding: .8rem;
+  top: 3rem;
   position: absolute;
   text-align: center;
   width: 4rem; }

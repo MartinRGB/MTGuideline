@@ -15,7 +15,7 @@
       -->
 
     <!-- SEO -->
-    <title>WebSlides Portfolios: Showcase your work</title>
+    <title>Motion Theory in Actual Project</title>
     <meta name="description" content="WebSlides is the easiest way to make HTML presentations and portfolios. It's simple, fast, and free.">
 
     <!-- URL CANONICAL -->
@@ -49,13 +49,13 @@
     <meta name="twitter:image" content="../static/images/share-webslides.jpg"> <!-- EDIT -->
 
     <!-- FAVICONS -->
-    <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
-    <link rel="shortcut icon" sizes="32x32" href="../static/images/favicons/favicon-32.png">
-    <link rel="apple-touch-icon icon" sizes="76x76" href="../static/images/favicons/favicon-76.png">
-    <link rel="apple-touch-icon icon" sizes="120x120" href="../static/images/favicons/favicon-120.png">
-    <link rel="apple-touch-icon icon" sizes="152x152" href="../static/images/favicons/favicon-152.png">
-    <link rel="apple-touch-icon icon" sizes="180x180" href="../static/images/favicons/favicon-180.png">
-    <link rel="apple-touch-icon icon" sizes="192x192" href="../static/images/favicons/favicon-192.png">
+    <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/tinyicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="../static/images/favicons/tinyicon.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="../static/images/favicons/tinyicon.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="../static/images/favicons/tinyicon.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="../static/images/favicons/tinyicon.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="../static/images/favicons/tinyicon.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="../static/images/favicons/tinyicon.png">
 
     <!-- Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -64,7 +64,7 @@
   <body>
     <header role="banner">
       <nav role="navigation">
-        <a class="web-title" href="../index.html" title="WebSlides">Code in Motion</a>
+        <a class="web-title" href="#slide=3" title="WebSlides">Content</a>
         <ul>
           <li class="github">
             <a rel="external" href="https://github.com/MartinRGB/MTGuideline" title="Github">
@@ -74,15 +74,6 @@
               <em>WebSlides</em>
             </a>
           </li>
-          <!-- <li class="twitter">
-            <a rel="external" href="https://twitter.com/webslides" title="Twitter">
-              <svg class="fa-twitter">
-                <use xlink:href="#fa-twitter"></use>
-              </svg>
-              <em>@WebSlides</em>
-            </a>
-          </li> -->
-          <!--  <li class="dribbble"><a rel="external" href="http://dribbble.com/webslides" title="Dribbble"><svg class="fa-dribbble"><use xlink:href="#fa-dribbble"></use></svg> <em>webslides</em></a></li> -->
         </ul>
       </nav>
     </header>
@@ -90,29 +81,10 @@
     <main role="main">
       <article id="webslides">
 
-        <!-- Quick Guide
-          - Each parent <section> in the <article id="webslides"> element is an individual slide.
-          - Vertical sliding = <article id="webslides" class="vertical">
-          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
-        -->
-
-        <!-- <section class="bg-primary">
-         <span class="background dark" style="background-image:url('https://source.unsplash.com/oHrodCLNnU8/')"></span>
-          <div class="wrap aligncenter">
-            <h1 class="text-landing">Portfolios</h1>
-            <p class="text-symbols">* * * </p>
-            <p><a class="button ghost" href="https://webslides.tv/webslides-latest.zip" title="Download WebSlides for free"><svg class="fa-cloud-download">
-                <use xlink:href="#fa-cloud-download"></use>
-              </svg> WebSlides</a>
-            </p>
-          </div>
-        </section> -->
-
         <section>
           <!--.wrap = container (width: 90%) -->
-          <div class="herobg"></div>
-          <div class="wrap aligncenter">
-            <p class="text-subtitle">Theory in actual project</p>
+          <div class="wrap aligncenter fadeInUp">
+            <p class="text-subtitle">Motion Theory in actual project</p>
             <h2>交互动画的内部原理和对接实践</h2>
           </div>
           <!-- .end .wrap -->
@@ -122,25 +94,24 @@
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>WebSlides is really easy</strong></h3>
-                <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code looks superb. It uses <strong>intuitive markup with popular naming conventions</strong>. There's no need to overuse classes or nesting. Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a>. <strong>Tutorials</strong>: <a href="../demos/components.html" title="WebSlides Components">Components</a> &middot; <a href="../demos/classes.html" title="WebSlides Classes">Classes</a>.</p>
+                <h3><strong>动画效果的精确还原并不容易</strong></h3>
+                <p class="text-intro">每位设计师都希望开发者能够很好的实现自己的设计，但实际效果经常不甚理想。</p>
+                <p>设计师往往关注设计层面动画原理，<strong>对于开发层面中动画的原理缺乏洞察</strong>。 更多的了解原理，有助于设计抉择。</p>
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>&lt;article id="webslides"&gt;
-  <span class="code-comment">&lt;!-- Slide 1 --&gt;</span>
-  &lt;section&gt;
-    &lt;h1&gt;Design for trust&lt;/h1&gt;
-  &lt;/section&gt;
-  <span class="code-comment">&lt;!-- Slide 2 --&gt;</span>
-  &lt;section class="bg-primary"&gt;
-    &lt;div class="wrap"&gt;
-      &lt;h2&gt;.wrap = container (width: 90%)&lt;/h2&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-&lt;/article&gt;
-</pre>
+                <pre><code class="java">SpringSystem springSystem = SpringSystem.create();
+Spring spring = springSystem.createSpring();
+spring.addListener(new SimpleSpringListener() {
+    @Override
+    public void onSpringUpdate(Spring spring) {
+      float value = (float) spring.getCurrentValue();
+      myView.setScaleX(value);
+      myView.setScaleY(value);
+    }
+  });
+spring.setEndValue(1);</code></pre>
+                
               </div>
               <!-- .end .column -->
             </div>
@@ -150,71 +121,29 @@
         </section>
         <section>
           <div class="wrap size-50">
-            <h3>Examples</h3>
-            <p>All content is for demo purposes only.</p>
+            <h3>目录</h3>
+            <p>通过交互式案例，理解设备内部效果的原理。</p>
             <hr>
             <ol class="text-cols">
-              <li><a target="_blank" href="#slide=5">Welcomes & Abouts</a></li>
-              <li><a target="_blank" href="#slide=9">Covers & Case Studies</a></li>
-              <li><a target="_blank" href="#slide=16">Metrics & Data</a></li>
-              <li><a target="_blank" href="#slide=22">Services & Clients</a></li>
-              <li><a target="_blank" href="#slide=28">Galleries</a></li>
-              <li><a target="_blank" href="#slide=33">Cards</a></li>
-              <li><a target="_blank" href="#slide=36">Features & Benefits</a></li>
-              <li><a target="_blank" href="#slide=41">CV/Resumé</a></li>
-              <li><a target="_blank" href="#slide=45">Quotes</a></li>
-              <li><a target="_blank" href="#slide=49">SVG Icons</a></li>
-              <li><a target="_blank" href="#slide=50">Logos</a></li>
-              <li><a target="_blank" href="#slide=51">CSS Alignments</a></li>
-              <li><a target="_blank" href="#slide=62">CSS Animations</a></li>
-              <li><a target="_blank" href="#slide=67">Background images</a></li>
-              <li><a target="_blank" href="#slide=70">Embedding videos, maps, charts...</a></li>
-              <li><a target="_blank" href="#slide=76">Typography</a></li>
+              <li><a href="#slide=4">Easing - 缓动</a></li>
+              <li><a href="#slide=9">Spring - 弹性</a></li>
+              <li><a href="#slide=16">Real-time Interaction - 实时交互</a></li>
+              <li><a href="#slide=22">iOS Animation - iOS 动画</a></li>
+              <li><a href="#slide=28">Android Animation - 安卓动画</a></li>
+              <li><a href="#slide=33">Graphics | OpenGL - 底层渲染</a></li>
+              <li><a href="#slide=36">Communication - 开发对接</a></li>
+              <li><a href="#slide=41">Question And Answer</a></li>
             </ol>
           </div>
-          <!-- .end .wrap -->
         </section>
+
         <section>
-          <div class="wrap">
-            <h1>Design <span>for</span> trust</h1>
-            <ul class="flexblock blink border">
-              <li>
-                <a href="#">
-                  <h2>
-                    <svg class="fa-bar-chart">
-                      <use xlink:href="#fa-bar-chart"></use>
-                    </svg>
-                    Purpose
-                  </h2>
-                  Businesses that people love
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <h2>
-                    <svg class="fa-balance-scale">
-                      <use xlink:href="#fa-balance-scale"></use>
-                    </svg>
-                    Principles
-                  </h2>
-                  Ethics of openness and good taste
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <h2>
-                    <svg class="fa-cog">
-                      <use xlink:href="#fa-cog"></use>
-                    </svg>
-                    Process
-                  </h2>
-                  Useful &rarr; Easy &rarr; Fast &rarr; Beautiful
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- .end .wrap -->
+            <div class="wrap aligncenter fadeInUp">
+              <h2><strong>缓动</strong></h2>
+            </div>
+            <!-- .end .wrap -->
         </section>
+        
         <section class="bg-primary">
          <div class="wrap">
             <h1>Design <span>for</span> understanding</h1>
@@ -1738,34 +1667,71 @@
           </div>
           <!-- .end .wrap -->
         </section>
+
         <section>
+          <div class="wrap">
+            <h1>Design <span>for</span> trust</h1>
+            <ul class="flexblock blink border">
+              <li>
+                <a href="#">
+                  <h2>
+                    <svg class="fa-bar-chart">
+                      <use xlink:href="#fa-bar-chart"></use>
+                    </svg>
+                    Purpose
+                  </h2>
+                  Businesses that people love
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <h2>
+                    <svg class="fa-balance-scale">
+                      <use xlink:href="#fa-balance-scale"></use>
+                    </svg>
+                    Principles
+                  </h2>
+                  Ethics of openness and good taste
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h2>
+                    <svg class="fa-cog">
+                      <use xlink:href="#fa-cog"></use>
+                    </svg>
+                    Process
+                  </h2>
+                  Useful &rarr; Easy &rarr; Fast &rarr; Beautiful
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- <section>
           <div class="wrap size-60">
-            <!-- Responsive video/iframe... Add <div class="embed"> -->
             <div class="embed">
               <div data-youtube data-youtube-id="vXeF6Uot8pk" data-autoplay></div>
             </div>
-            <!-- .end .embed -->
           </div>
-          <!-- .end .wrap -->
         </section>
         <section class="fullscreen">
-          <!-- Fullscreen Video -->
           <div class="embed">
             <div data-youtube data-youtube-id="b4LrTkWq9jU" data-autoplay></div>
           </div>
-          <!-- .end .embed -->
-        </section>
-        <section class="fullscreen bg-black aligncenter">
+        </section> -->
+
+
+        <!-- <section class="fullscreen bg-black aligncenter">
          <div class="embed">
            <video autoplay loop muted poster="https://webslides.tv/static/images/peggy.jpg">
             <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
            </video>
-          </div><!-- .end .embed -->
-          <!-- .wrap = container (width: 90%) -->
+          </div>
           <div class="wrap size-50">
             <h2><strong>We build brands with integrity and substance</strong></h2>
           </div>
-          <!-- .end .wrap -->
         </section>
         <section class="fullscreen bg-blue">
          <div class="embed dark">
@@ -1773,14 +1739,11 @@
             <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
            </video>
           </div>
-          <!-- .embed -->
-          <!-- .wrap = container (width: 90%) -->
           <div class="wrap size-50">
             <h2><strong>We help with design direction</strong></h2>
             <p>0verlay: <code>section.fullscreen.bg-blue > .embed.dark</code> or .light</p>
           </div>
-          <!-- .end .wrap -->
-        </section>
+        </section> -->
         <section class="bg-primary">
           <div class="wrap size-50">
             <p class="text-context">Status of Net Neutrality around the world.</p>
@@ -1864,6 +1827,10 @@
 
     <!-- Required -->
     <script src="../static/js/webslides.js"></script>
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
     <script>
       window.ws = new WebSlides();
