@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="1; url=demos/portfolios.html">
+        <script type="text/javascript">
+            window.location.href = "demos/portfolios.html"
+        </script>
+
+        <style type="text/css">
+          .link {
+            text-align: center;
+            font-family: "Inconsolata", monospace;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 26px;
+            text-decoration: none;
+            border: 1px solid rgba(0, 20, 80, 0.1);
+            color: #333;
+          }
+
+          .link:visited{
+            color: #333;
+          }
+
+          body {
+              background-color: #f7f9fb;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              min-height: 98vh;
+/*              padding: 2.4rem;*/
+              page-break-after: always;
+              position: relative;
+              word-wrap: break-word;
+          }
+
+          p{
+              float: left;
+              margin: 0px;
+          }
+
+          @media (min-width: 767px){
+            .link{
+              padding: 40px;
+              font-size: 54px;
+            }
+          }
+        </style>
+        <title>页面重导向</title>
+    </head>
+    <body>
+        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
+        <a class="button ghost link" href="demos/portfolios.html"><p class="emoji">🤘</p><p> Click me</p></a>
+    </body>
+</html>
