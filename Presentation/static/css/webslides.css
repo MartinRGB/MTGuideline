@@ -1322,8 +1322,8 @@ header[role='banner'] {
   padding:1.2em 1.2em;
   opacity: 0; 
 }
-  header[role='banner']:hover {
-    opacity: 1; }
+header[role='banner'] .activate {
+  opacity: 1; }
 
 @media (max-width: 767px) {
   footer .alignleft,

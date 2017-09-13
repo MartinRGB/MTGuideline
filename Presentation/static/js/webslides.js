@@ -839,6 +839,24 @@ var WebSlides = function () {
       throw new Error('Couldn\'t find the webslides container!');
     }
 
+
+    var banner = document.getElementById('banner');
+
+    // banner.addEventListener('click',(function(e){
+
+    //   banner.toggleClass('activate')
+    //   e.preventDefault();
+    // }));
+
+    banner.addEventListener('click', function (event) {
+      if(document.getElementById('banner').style.opacity == 0){
+        document.getElementById('banner').style.opacity = '1';
+      }
+      else{
+        document.getElementById('banner').style.opacity = '0';
+      }
+    });
+
     /**
      * Moving flag.
      * @type {boolean}
