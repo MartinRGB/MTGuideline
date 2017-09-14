@@ -18,6 +18,10 @@ div.hidden
     z-index: 1000 !important;
 }
 
+.ease_visualizer {
+	max-width: 400px !important;
+}
+
 /*----------------------------------------------*/
 
 .custom_edit_bg {
@@ -61,20 +65,23 @@ div.hidden
 .ease_visualizer textarea:focus, .ease_visualizer input:focus, .ease_visualizer button:focus, .ease_visualizer select:focus {
 	outline: 0;
 }
+
 .ease_menu {
-	position: absolute;
+	margin-top: -30px;
 	top: 70px;
-	right: 20px;
-	width:244px;
-	font-size: 1.5em;
-	color: #626262;
-	z-index:500;
-	display: inline-block;
+    margin-top: 10px;
+    right: 20px;
+    width: 244px;
+    font-size: 1.1em;
+    z-index: 500;
+	display: -webkit-inline-box;
+	color: rgb(98, 98, 98);
+    width: 100% !important; 
 }
 .ease_visualizer h2 {
 	position: absolute;
-	top: 24px;
-	font-size:36px;
+	top: 16px;
+    font-size: 16px;
 	color: #999;
 	font-weight: 400;
 	padding: 0;
@@ -85,12 +92,13 @@ div.hidden
   background-color: #333;
 }
 .ease_menu .ease_class {
-	position: relative;
-	padding: 2px 6px;
-  border-radius: 4px;
-  float: left;
-  clear: both;
-  cursor: pointer;
+    position: relative;
+    padding: 2px 6px;
+    border-radius: 4px;
+    height: 19px;
+    display: -webkit-inline-box;
+    clear: both;
+    cursor: pointer;
 }
 .ease_menu .ease_type {
 	position: absolute;
@@ -102,7 +110,9 @@ div.hidden
 .ease_menu .ease_type_section {
 	border-top: 1px solid #444;
 	padding: 6px;
+	display: -webkit-inline-box;
   clear:both;
+  width: 100%;
   position: relative;
   top: 10px;
 }
@@ -136,16 +146,22 @@ div.hidden
 }
 .ease_visualizer .command {
 	position: relative;
-	padding: 14px;
-	margin-top: 30px;
-	font-size: 18px;
-	line-height: 26px;
+	margin-top: 10px;
+	font-size: 12px;
+	line-height: 12px;
 	font-family: consolas, menlo, monaco, "courier new", monospace;
 	z-index: 2;
 	background-color: rgba(255,255,255,0.025);
 	color: #F1F2F3;
 	border-radius: 6px;
 }
+
+
+/* .prop prop_graph span .number{
+	text-align: left !important;
+    padding: 0 !important;
+    display: -webkit-inline-box !important;
+} */
 .ease_visualizer.light .command {
 	background-color: rgba(0,0,0,0.855);
 }
@@ -171,6 +187,9 @@ div.hidden
 .ease_visualizer .command .number,
 .ease_visualizer .command .number + .display {
 	color: #FACD22;
+	text-align: left !important;
+    padding: 0 !important;
+    display: -webkit-inline-box !important;
 }
 .ease_visualizer .command .class,
 .ease_visualizer .command .class + .display,
@@ -286,19 +305,21 @@ div.hidden
 	}
 }
 .ease_visualizer .controls button {
+	width: 100px !important;
+    float: right;
+    display: block;
+	top: 19px;
+    height: 22px;
 	border: none;
-	margin: -40px 0 0 0;
-	padding: 0 24px;
-	cursor: pointer;
-	display: inline-block;
-	line-height: 44px;
-	font-size:18px;
-	border-radius: 6px;
-	text-transform: uppercase;
-	float: right;
-	position:relative;
-	color: #F1F2F3;
-	background-color: #414141;
+    margin: -35px 0 0 0;
+    cursor: pointer;
+    line-height: 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    position: relative;
+    color: #F1F2F3;
+    background-color: #414141;
 	background-image: -webkit-linear-gradient(top, #575757, #414141);
 	background-image: -moz-linear-gradient(top, #575757, #414141);
 	background-image: -ms-linear-gradient(top, #575757, #414141);
@@ -342,10 +363,12 @@ div.hidden
 .ease_visualizer .graph {
 	position: relative;
 	width: 100%;
-	max-width: 530px;
+	max-width: 350px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	user-select: none;
+
+	top: -40px;
 }
 .ease_visualizer.editMode.mousedown .graph {
 	z-index: 100;
@@ -470,18 +493,23 @@ div.hidden
 	line-height: 30px;
 }
 .ease_visualizer .graph .progress_bar.horizontal .label {
-	bottom: 1px;
+	bottom: -3px;
+	display: block;
+    font-size: 12px;
 	width: 100%;
 	text-align: center;
 }
 .ease_visualizer .graph .progress_bar.vertical .label {
 	top: 50%;
-	left: 2px;
+	left: 5px;
+    font-size: 12px;
+	/* left: 2px; */
 	margin-left: -50%;
 	transform-origin: top left;
 	-webkit-transform: matrix(0, 1, -1, 0, 0, 0);
 	-moz-transform: matrix(0, 1, -1, 0, 0, 0);
 	transform: matrix(0, 1, -1, 0, 0, 0);
+	display: block;
 }
 .ease_visualizer .graph .progress_bar {
 	position: absolute;

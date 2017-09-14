@@ -29,7 +29,6 @@
 
     <!-- Optional - CSS SVG Icons (Font Awesome) -->
     <link rel="stylesheet" type="text/css" media="all" href="../static/css/svg-icons.css">
-    <link rel="stylesheet" type="text/css" media="all" href="../static/css/gsap-style.css">
     
     <!-- SOCIAL CARDS (ADD YOUR INFO) -->
 
@@ -152,11 +151,13 @@
                   </a>
               </li>
               <li>
+                <a href="#slide=10">
                 <div>
                   <h2><span>三次贝塞尔</span>设计常用</h2>
                   AE 和一些时间轴类动画工具中广泛使用<br>
                   开发中常作为稍进阶动画的存在
                 </div>
+                </a>
               </li>
             </ul>
           </div>
@@ -176,12 +177,14 @@
             <div class="content-right">
                 <!-- <p>We are digital people by nature. When we develop a vision, it is based on knowledge, research and experience. Those images are for demo purposes only.</p> -->
               
-                <div class="ease-visualizer" data-ease="Power2.easeOut"></div>
+                <!-- <div class="ease-visualizer" data-ease="Power2.easeOut"></div>
                 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
                 <script src='http://ow94977o5.bkt.clouddn.com/jquery.min.js'></script>
                 <script src='http://ow94977o5.bkt.clouddn.com/CustomEase.min.js'></script>
                 <script src='http://ow94977o5.bkt.clouddn.com/MorphSVGPlugin.min.js'></script>
-                <script src="../static/GSAP/js/index.js"></script>
+                <script src="../static/GSAP/js/index.js"></script> -->
+                <iframe id="serviceFrameSend" src="../static/GSAP/index.html" width="400" height="700"  frameborder="0"></iframe>
+                <p class="caption aligncenter" style="font-size: 12px; margin-top: -20px;">GSAP Easing Library</p>
             </div>
             <!-- end .content-left -->
 
@@ -270,8 +273,33 @@
                 </li>
               </ul>
             </div>
-            <!-- .end .wrap -->
           </section>
+
+          <section class="fullscreen bg-black aligncenter" poster="../static／media/bezierposter.jpg">
+              <div class="embed">
+                <video loop muted controls >
+                 <source src="../static/media/bezier.mp4" type="video/mp4">
+                </video>
+               </div>
+             </section>
+        
+          <section>
+              <div class="wrap">
+                <!-- <div class="content-left">
+                  <h2>关注属性的变化量和变化时间的关系</h2>
+                </div> -->
+                <div class="content-left">
+                  <h1><strong>三次贝塞尔函数</strong></h1>  
+                  <h3>属性的变化量 = <strong>时间</strong>输入<strong>三次贝塞尔函数</strong>所得出的<strong>输出</strong></h3>
+                  <img src="../static/media/bezier-function.svg" style="margin-top:1em;margin-bottom:0em;"></img>
+                </div>
+    
+                <div class="content-right">
+                    <iframe id="serviceFrameSend" src="../static/Cubic-Bezier/index.html" width="400" height="700"  frameborder="0"></iframe>
+                    <p class="caption aligncenter" style="font-size: 12px; margin-top: -20px;">Cubic-Bezier.com</p>
+                </div>
+              </div>
+            </section>
 
         <section>
           <div class="wrap">
