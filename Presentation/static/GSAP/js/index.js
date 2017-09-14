@@ -3,8 +3,7 @@
 
 window.onload = function(){
 	(function ($) {
-		// var htmlLink = "js/EaseVisualizer.html";
-		var htmlLink = "keynote.html";
+		var htmlLink = "EaseVisualizer.html";
 		var id = 0;
 		var timeline;
 		var $menuEases;

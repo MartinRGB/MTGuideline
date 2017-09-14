@@ -1532,7 +1532,9 @@ form[class*='bg-'] {
     [class*='content-']:after {
       clear: both; }
   .content-left {
-    float: left; }
+    float: left; 
+    margin-top: 26vh;
+  }
   .content-right {
     float: right; }
   [class*='content-'] + [class*='content-'] {
