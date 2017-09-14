@@ -1,0 +1,891 @@
+/* body {
+  background-color:#181818;
+} */
+
+div.hidden
+{
+   display: none
+}
+
+/* .ease_visualizer .controls button{
+	margin:0 !important;
+} */
+
+.ease_visualizer .ease_selector .ease_type {
+	font-size: 14px !important;
+}
+.ease_visualizer h2 {
+    z-index: 1000 !important;
+}
+
+/*----------------------------------------------*/
+
+.custom_edit_bg {
+	fill:#303030;
+}
+#custom_edit_container {
+	top:0;
+	left:0;
+	overflow:visible;
+}
+.ease-instructions {
+	position: absolute;
+	top:38px;
+	right: 13px;
+	width: 245px;
+	color: #777;
+	border-bottom: 1px solid #444;
+	padding-bottom: 10px;
+	pointer-events: none;
+	opacity: 0;
+	visibility: hidden;
+}
+.ease-instructions p {
+	font-size: 13px;
+	margin: 0;
+	padding: 2px 0;
+}
+.ease-visualizer .ease-instructions h2 {
+	font-size: 17px;
+	color: #aaa;
+	margin:0;
+	padding: 2px 0;
+	position: static;
+}
+
+.ease_visualizer, .ease_visualizer * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ease_visualizer textarea:focus, .ease_visualizer input:focus, .ease_visualizer button:focus, .ease_visualizer select:focus {
+	outline: 0;
+}
+.ease_menu {
+	position: absolute;
+	top: 70px;
+	right: 20px;
+	width:244px;
+	font-size: 1.5em;
+	color: #626262;
+	z-index:500;
+	display: inline-block;
+}
+.ease_visualizer h2 {
+	position: absolute;
+	top: 24px;
+	font-size:36px;
+	color: #999;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+}
+.ease_menu .ease_class:hover {
+	color: #888;
+  background-color: #333;
+}
+.ease_menu .ease_class {
+	position: relative;
+	padding: 2px 6px;
+  border-radius: 4px;
+  float: left;
+  clear: both;
+  cursor: pointer;
+}
+.ease_menu .ease_type {
+	position: absolute;
+	display: none;
+}
+.ease_menu .ease_type_quick_label {
+  color: #ddd;
+}
+.ease_menu .ease_type_section {
+	border-top: 1px solid #444;
+	padding: 6px;
+  clear:both;
+  position: relative;
+  top: 10px;
+}
+.ease_visualizer {
+	width: 100%;
+	max-width: 840px;
+	padding: 0;
+	padding-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #999999;
+	font-size: 13px;
+	font-family: "Signika Negative", sans-serif;
+	position: relative;
+}
+
+.ease_visualizer {
+	visibility: hidden;
+}
+.ease_visualizer.enabled {
+	visibility: visible;
+}
+
+.ease_visualizer a {
+	color: #61AC27;
+}
+
+.ease_visualizer .go {
+	width: 244px;
+	z-index: 5;
+}
+.ease_visualizer .command {
+	position: relative;
+	padding: 14px;
+	margin-top: 30px;
+	font-size: 18px;
+	line-height: 26px;
+	font-family: consolas, menlo, monaco, "courier new", monospace;
+	z-index: 2;
+	background-color: rgba(255,255,255,0.025);
+	color: #F1F2F3;
+	border-radius: 6px;
+}
+.ease_visualizer.light .command {
+	background-color: rgba(0,0,0,0.855);
+}
+
+.ease_visualizer .command pre {
+	display: inline;
+}
+
+@media screen and (min-width: 950px) {
+	.ease_visualizer .command div {
+		display: inline;
+	}
+	.ease_visualizer .command pre {
+		display: none;
+	}
+}
+
+.ease_visualizer .command .easetype_rough .rough_easeclass,
+.ease_visualizer .command .easetype_rough .rough_easetype {
+	display: inline;
+}
+
+.ease_visualizer .command .number,
+.ease_visualizer .command .number + .display {
+	color: #FACD22;
+}
+.ease_visualizer .command .class,
+.ease_visualizer .command .class + .display,
+.ease_visualizer .command .main_ease_class_label,
+.ease_visualizer .command .rough_ease_class_label {
+	color: #72a5d8;
+}
+.ease_visualizer .command .string,
+.ease_visualizer .command .string + .display,
+.ease_visualizer .command .rough_taper_label {
+	color: #EC7600;
+}
+.ease_visualizer .command .comment {
+	color: #999999;
+	display: block !important;
+	line-height: 24px;
+	margin: 5px 0;
+}
+.ease_visualizer .command .comment div {
+	display: block;
+}
+.ease_visualizer .command .comment .clubgreensock {
+	color: #F1F2F3;
+	padding: 14px 6px 6px 6px;
+	margin-top: 14px;
+	border-top: 1px solid #61AC27;
+}
+.ease_visualizer .command .comment .clubgreensock:before {
+	content: "";
+	float: left;
+	width: 62px;
+	height: 74px;
+	margin-top: -8px;
+	margin-left: -6px;
+	margin-right: 14px;
+	background: url(https://www.greensock.com/forums/uploads/packages-0558826001407339622.png) 0 0 no-repeat;
+	background-size: 62px;
+}
+.ease_visualizer .command .keyword,
+.ease_visualizer .command .slowmo_yoyo_label,
+.ease_visualizer .command .rough_randomize_label,
+.ease_visualizer .command .rough_clamp_label {
+	color: #93C763;
+}
+
+.ease_visualizer label {
+	position: relative;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.ease_visualizer label.locked {
+	text-decoration: none;
+	cursor: auto;
+}
+
+.ease_visualizer label input,
+.ease_visualizer label select {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	font: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	height: 100%;
+	width: 100%;
+	color: #000000 !important;
+	opacity: 0;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+}
+.ease_visualizer label input + .display {
+	position: relative;
+	z-index: 2;
+}
+.ease_visualizer label input:focus + .display,
+.ease_visualizer label select:focus + .display {
+	-webkit-box-shadow: 0 0 0 2px #222222, 0 0 1px 3px #FFFFFF;
+	-moz-box-shadow: 0 0 0 2px #222222, 0 0 1px 3px #FFFFFF;
+	box-shadow: 0 0 0 2px #222222, 0 0 1px 3px #FFFFFF;
+	outline: none;
+}
+
+.ease_visualizer  span[contenteditable] {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.ease_visualizer  span[contenteditable]:focus {
+	-webkit-box-shadow: 0 0 0 2px #222222, 0 0 1px 3px #FFFFFF;
+	-moz-box-shadow: 0 0 0 2px #222222, 0 0 1px 3px #FFFFFF;
+	box-shadow: 0 0 0 2px #222222, 0 0 1px 3px #FFFFFF;
+	outline: none;
+}
+.ease_visualizer .easeclass {
+	direction: rtl;
+}
+
+
+.ease_visualizer .controls {
+	/* margin: 10px 0; */
+	position: relative;
+	z-index: 5;
+}
+@media screen and (min-width: 720px) {
+	.ease_visualizer .controls {
+		/* margin-top: -16px; */
+	}
+}
+.ease_visualizer .controls button {
+	border: none;
+	margin: -40px 0 0 0;
+	padding: 0 24px;
+	cursor: pointer;
+	display: inline-block;
+	line-height: 44px;
+	font-size:18px;
+	border-radius: 6px;
+	text-transform: uppercase;
+	float: right;
+	position:relative;
+	color: #F1F2F3;
+	background-color: #414141;
+	background-image: -webkit-linear-gradient(top, #575757, #414141);
+	background-image: -moz-linear-gradient(top, #575757, #414141);
+	background-image: -ms-linear-gradient(top, #575757, #414141);
+	background-image: -o-linear-gradient(top, #575757, #414141);
+	background-image: linear-gradient(to bottom, #575757, #414141);
+	text-shadow: 0px 1px 0px #414141;
+	-webkit-box-shadow: 0px 1px 0px #414141;
+	-moz-box-shadow: 0px 1px 0px #414141;
+	box-shadow: 0px 1px 0px #414141;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.ease_visualizer .controls button:hover {
+	background-color: #57a818;
+	background-image: -webkit-linear-gradient(top, #57a818, #4d9916);
+	background-image: -moz-linear-gradient(top, #57a818, #4d9916);
+	background-image: -ms-linear-gradient(top, #57a818, #4d9916);
+	background-image: -o-linear-gradient(top, #57a818, #4d9916);
+	background-image: linear-gradient(to bottom, #57a818, #4d9916);
+	text-shadow: 0px 1px 0px #32610e;
+	-webkit-box-shadow: 0px 1px 0px #32610e;
+	-moz-box-shadow: 0px 1px 0px #32610e;
+	box-shadow: 0px 1px 0px #32610e;
+}
+
+.ease_visualizer .visualization {
+	max-width: 100%;
+	height: auto;
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+	z-index: 100;
+}
+
+.ease_visualizer .fluidwrap {
+	height: 0;
+	width: 100%;
+	padding-bottom: 100%;
+}
+
+.ease_visualizer .graph {
+	position: relative;
+	width: 100%;
+	max-width: 530px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.ease_visualizer.editMode.mousedown .graph {
+	z-index: 100;
+}
+.ease_visualizer .graph .graphwrap {
+	position: absolute;
+	top: 0;
+	right: 5.660377358490566%;
+	bottom: 5.660377358490566%;
+	left: 0;
+}
+	.ease_visualizer .graph .graph_wrap_inner {
+		pointer-events: none;
+		overflow:visible;
+	}
+
+.ease_visualizer .graph .svg {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	cursor: default;
+}
+.ease_visualizer .graph .svg svg {
+	overflow: visible;
+}
+.ease_visualizer .graph .svg .graph_bg {
+	fill: #303030;
+}
+.ease_visualizer.light .graph .svg .graph_bg {
+	fill: #DDDDDD;
+}
+.ease_visualizer .graph .svg .graph_linear {
+	fill: none;
+	stroke: #1d1d1d;
+	stroke-width: 1.5px;
+}
+.ease_visualizer.light .graph .svg .graph_linear {
+	stroke: #EDEDED;
+}
+.ease_visualizer .graph .svg .graph_line {
+	fill: none;
+	stroke: rgba(255,255,255,0.07);
+	stroke-width: 1.5px;
+}
+.ease_visualizer.light .graph .svg .graph_line {
+	stroke: rgba(0,0,0,0.1);
+}
+.ease_visualizer .graph .svg .graph_path, .ease_visualizer .graph .svg .ease_template {
+	fill: none;
+	stroke: #666666;
+	stroke-width: 2px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+.ease_visualizer .graph .svg .ease_template {
+	stroke: #F1F2F3;
+}
+.ease_visualizer .graph .svg .ease_template_bg {
+	fill: transparent;
+}
+
+.ease_visualizer.light .graph .svg .graph_path, .ease_visualizer.light .graph .svg .ease_template {
+	stroke: #AAAAAA;
+}
+.ease_visualizer.light .graph .svg .ease_template {
+	stroke: #CCC;
+}
+.ease_visualizer .graph .svg .graph_path_reveal {
+	fill: none;
+	stroke: #F1F2F3;
+	stroke-width: 0.4px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+.ease_visualizer.light .graph .svg .graph_path_reveal {
+	stroke: #3C3C3C;
+}
+
+.ease_visualizer .graph .svg .control,
+.ease_visualizer .graph .svg .point {
+	cursor: pointer;
+}
+.ease_visualizer .graph .svg .point,
+.ease_visualizer .graph .svg .control {
+	fill: #61AC27;
+	stroke: transparent;
+	stroke-width: 2px;
+}
+.ease_visualizer .graph .svg .point {
+	fill: #61AC27;
+}
+.ease_visualizer .graph .svg .line {
+	stroke: #61AC27;
+	stroke-width: 0.3px;
+	stroke-dasharray: 1,0.6;
+}
+.ease_visualizer .graph .svg .outside .point,
+.ease_visualizer .graph .svg .outside .control {
+	fill: #E81146;
+}
+.ease_visualizer .graph .svg .outside .line {
+	stroke: #E81146;
+}
+.ease_visualizer .graph .svg .mouse_catch {
+	fill: transparent;
+}
+.ease_visualizer .graph .custom_edit {
+	visibility: hidden;
+}
+.ease_visualizer.editMode .graph .custom_edit {
+	visibility: visible;
+}
+.ease_visualizer .graph .progress {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+}
+.ease_visualizer .graph .progress_bar .label {
+	position: absolute;
+	line-height: 30px;
+}
+.ease_visualizer .graph .progress_bar.horizontal .label {
+	bottom: 1px;
+	width: 100%;
+	text-align: center;
+}
+.ease_visualizer .graph .progress_bar.vertical .label {
+	top: 50%;
+	left: 2px;
+	margin-left: -50%;
+	transform-origin: top left;
+	-webkit-transform: matrix(0, 1, -1, 0, 0, 0);
+	-moz-transform: matrix(0, 1, -1, 0, 0, 0);
+	transform: matrix(0, 1, -1, 0, 0, 0);
+}
+.ease_visualizer .graph .progress_bar {
+	position: absolute;
+	background-color: #2f2f2f;
+}
+.ease_visualizer.light .graph .progress_bar {
+	background-color: #DDDDDD;
+}
+.ease_visualizer .graph .progress_bar.horizontal {
+	height: 2px;
+	width: auto;
+	top: auto;
+	bottom: 0;
+	left: 0;
+	right: 5.660377358490566%;
+}
+.ease_visualizer .graph .progress_bar.vertical {
+	width: 2px;
+	top: 0;
+	bottom: 5.660377358490566%;
+	left: auto;
+	right: 0;
+}
+.ease_visualizer .graph .progress_fill {
+	height: 100%;
+	width: 100%;
+	background-color: #999999;
+}
+.ease_visualizer.light .graph .progress_fill {
+	background-color: #777777;
+}
+.ease_visualizer .graph .progress_bar.vertical .progress_fill {
+	background-color: #61AC27;
+}
+.ease_visualizer .graph .progress_bar.vertical .progress_joint {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	margin-left: -4px;
+	margin-top: -5px;
+	border-radius: 50%;
+	background-color: rgb(136, 206, 2);
+}
+@media screen and (min-width: 560px) {
+	.ease_visualizer .graph .progress_bar.vertical .progress_joint {
+		width: 25px;
+		height: 25px;
+		margin-left: -11px;
+		margin-top: -12px;
+	}
+}
+.ease_visualizer .graph .progress_number {
+	position: absolute;
+	bottom: 0;
+	right: -9px;
+	line-height: 0.35em;
+	text-align: right;
+}
+
+@media screen and (max-width: 430px) {
+	.ease_visualizer .graph .progress_bar .label {
+		display: none;
+	}
+	.ease_visualizer .graph .progress_number {
+		display: none;
+	}
+}
+
+
+.ease_visualizer .clock {
+	position: relative;
+	width: 100%;
+	max-width: 530px;
+	border-radius: 50%;
+
+	background-color: #303030;
+}
+.ease_visualizer.light .clock {
+	background-color: #DDDDDD;
+}
+.ease_visualizer .clock_ease,
+.ease_visualizer .clock_linear,
+.ease_visualizer .clock_guide {
+	position: absolute;
+	left: 50%;
+	width: 2px;
+	margin-left: -1px;
+}
+.ease_visualizer .clock_linear {
+	top: 15%;
+	height: 35%;
+	width: 2px;
+	margin-left: -1px;
+	border-radius: 2px 2px 0 0;
+	background-color: #999999;
+}
+.ease_visualizer.light .clock_linear {
+	background-color: #3C3C3C;
+}
+.ease_visualizer .clock_ease {
+	height: 50%;
+	border-radius: 2px 2px 0 0;
+	background-color: #61AC27;
+}
+.ease_visualizer .clock_guide {
+	top: 0;
+	height: 50%;
+	background-color: #1d1d1d;
+	width: 1px;
+	margin-left: -0.5px;
+}
+.ease_visualizer.light .clock_guide {
+	background-color: #EDEDED;
+}
+.ease_visualizer .clock_joint,
+.ease_visualizer .clock_ease .clock_joint{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 50%;
+	left: 50%;
+	margin-left: -5px;
+	margin-top: -5px;
+	border-radius: 50%;
+	background-color: #999999;
+}
+.ease_visualizer.light .clock_joint {
+	background-color: #3C3C3C;
+}
+.ease_visualizer .clock_ease .clock_joint {
+	top: -1px;
+	background-color: #61AC27;
+}
+@media screen and (min-width: 560px) {
+	.ease_visualizer .clock_ease .clock_joint {
+		width: 16px;
+		height: 16px;
+		margin-left: -8px;
+		margin-top: -8px;
+	}
+}
+
+
+.ease_visualizer .box {
+	position: relative;
+	width: 100%;
+	max-width: 530px;
+	background-color: #303030;
+}
+.ease_visualizer.light .box {
+	background-color: #DDDDDD;
+}
+.ease_visualizer .box .boxwrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.ease_visualizer .boxbox {
+	position: relative;
+	width: 20%;
+	white-space: pre;
+	text-align: center;
+	margin-bottom: .8%;
+	border-radius: 6px;
+	height: 16%;
+	line-height: 24px;
+	padding: 0 0.5em;
+	color: #ccc;
+	background-color: #666666;
+  font-size: 16px;
+  line-height: 80px;
+}
+.ease_visualizer .boxbox.box_custom {
+	background-color: rgb(136, 206, 2);
+}
+
+
+.ease_visualizer .ease_selector {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 6;
+	background-color: #222;
+	overflow: auto;
+	padding: 4px;
+}
+.ease_visualizer .ease_selector .ease_selector_wrap {
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	background-color: #222222;
+}
+.ease_visualizer .ease_selector .ease_class {
+	overflow: hidden;
+	float: left;
+	width: 49.5%;
+	margin: 0 1% 0 0;
+	position: relative;
+}
+.ease_visualizer .ease_selector .ease_class:nth-child(even) {
+	margin: 0;
+}
+.ease_visualizer.light .ease_selector .ease_class {
+	border-color: #DDDDDD;
+}
+@media screen and (max-width: 500px) {
+	.ease_visualizer .ease_selector .ease_class {
+		clear: left;
+		width: 100%;
+		margin-right: 0;
+	}
+}
+.ease_visualizer .ease_selector input {
+	display: none;
+}
+.ease_visualizer .ease_selector .ease_type,
+.ease_visualizer .ease_selector button {
+	font-family: consolas, menlo, monaco, "courier new", monospace;
+	font-weight: normal;
+	font-size: 12px;
+	text-align: center;
+	color: #FFFFFF;
+}
+.ease_visualizer .ease_selector .ease_type {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	font-size: 22px;
+	line-height: 34px;
+	color: #fff;
+}
+.ease_visualizer .ease_selector button {
+	border: none;
+	margin: 1px 0 0 0;
+	padding: 0;
+	background: url(https://greensock.com/wp-content/themes/greensock/includes/EaseVisualizer/EaseVisualizer-dark.gif) 0 0 no-repeat;
+	background-size: 700%;
+	font-weight: bold;
+	color: #3C3C3C;
+	float: left;
+	height: 0;
+	width: 33.33333%;
+	padding-bottom: 33.33333%;
+	padding-top: 28px;
+	position: relative;
+}
+.ease_visualizer .ease_selector button span {
+	color: #999;
+	background-color: #111;
+}
+.ease_visualizer .ease_selector .other button {
+	width: 25%;
+}
+.ease_visualizer .ease_selector button:hover {
+	-webkit-box-shadow: 0 0 5px #4298ED inset;
+	-moz-box-shadow: 0 0 5px #4298ED inset;
+	box-shadow: 0 0 5px #4298ED inset;
+}
+.ease_visualizer .ease_selector button:focus,
+.ease_visualizer .ease_selector button:active {
+	outline: 0;
+	-webkit-box-shadow: 0 0 8px #4298ED inset;
+	-moz-box-shadow: 0 0 8px #4298ED inset;
+	box-shadow: 0 0 8px #4298ED inset;
+}
+.ease_visualizer .ease_selector button.Back.easeOut {
+	background-position: 0% 0%;
+}
+.ease_visualizer .ease_selector button.Back.easeInOut {
+	background-position: 16.6% 0%;
+}
+.ease_visualizer .ease_selector button.Back.easeIn {
+	background-position: 33.3% 0%;
+}
+
+.ease_visualizer .ease_selector button.Bounce.easeOut {
+	background-position: 50% 0%;
+}
+.ease_visualizer .ease_selector button.Bounce.easeInOut {
+	background-position: 66.6% 0%;
+}
+.ease_visualizer .ease_selector button.Bounce.easeIn {
+	background-position: 83.3% 0%;
+}
+
+.ease_visualizer .ease_selector button.Circ.easeOut {
+	background-position: 100% 0%;
+}
+.ease_visualizer .ease_selector button.Circ.easeInOut {
+	background-position: 0% 24.1%;
+}
+.ease_visualizer .ease_selector button.Circ.easeIn {
+	background-position: 16.6% 24.1%;
+}
+
+.ease_visualizer .ease_selector button.Elastic.easeOut {
+	background-position: 33.3% 24.1%;
+}
+.ease_visualizer .ease_selector button.Elastic.easeInOut {
+	background-position: 50% 24.1%;
+}
+.ease_visualizer .ease_selector button.Elastic.easeIn {
+	background-position: 66.6% 24.1%;
+}
+
+.ease_visualizer .ease_selector button.Expo.easeOut {
+	background-position: 83.3% 24.1%;
+}
+.ease_visualizer .ease_selector button.Expo.easeInOut {
+	background-position: 100% 24.1%;
+}
+.ease_visualizer .ease_selector button.Expo.easeIn {
+	background-position: 0% 48.2%;
+}
+
+.ease_visualizer .ease_selector button.Power0.easeOut {
+	background-position: 16.6% 48.2%;
+}
+.ease_visualizer .ease_selector button.Power0.easeInOut {
+	background-position: 16.6% 48.2%;
+}
+.ease_visualizer .ease_selector button.Power0.easeIn {
+	background-position: 16.6% 48.2%;
+}
+
+.ease_visualizer .ease_selector button.Power1.easeOut {
+	background-position: 33.3% 48.2%;
+}
+.ease_visualizer .ease_selector button.Power1.easeInOut {
+	background-position: 50% 48.2%;
+}
+.ease_visualizer .ease_selector button.Power1.easeIn {
+	background-position: 66.6% 48.2%;
+}
+
+.ease_visualizer .ease_selector button.Power2.easeOut {
+	background-position: 83.3% 48.2%;
+}
+.ease_visualizer .ease_selector button.Power2.easeInOut {
+	background-position: 100% 48.2%;
+}
+.ease_visualizer .ease_selector button.Power2.easeIn {
+	background-position: 0% 72.4%;
+}
+
+.ease_visualizer .ease_selector button.Power3.easeOut {
+	background-position: 16.6% 72.4%;
+}
+.ease_visualizer .ease_selector button.Power3.easeInOut {
+	background-position: 33.3% 72.4%;
+}
+.ease_visualizer .ease_selector button.Power3.easeIn {
+	background-position: 50% 72.4%;
+}
+
+.ease_visualizer .ease_selector button.Power4.easeOut {
+	background-position: 66.6% 72.4%;
+}
+.ease_visualizer .ease_selector button.Power4.easeInOut {
+	background-position: 83.3% 72.4%;
+}
+.ease_visualizer .ease_selector button.Power4.easeIn {
+	background-position: 100% 72.4%;
+}
+
+.ease_visualizer .ease_selector button.Sine.easeOut {
+	background-position: 0% 96.5%;
+}
+.ease_visualizer .ease_selector button.Sine.easeInOut {
+	background-position: 16.6% 96.5%;
+}
+.ease_visualizer .ease_selector button.Sine.easeIn {
+	background-position: 33.3% 96.5%;
+}
+
+.ease_visualizer .ease_selector button.CustomEase {
+	background-position: 50% 96.5%;
+}
+.ease_visualizer .ease_selector .other button.CustomEase {
+	background-position: 50% 99%;
+}
+.ease_visualizer .ease_selector button.RoughEase {
+	background-position: 66.6% 96.5%;
+}
+.ease_visualizer .ease_selector .other button.RoughEase {
+	background-position: 66.6% 99%;
+}
+.ease_visualizer .ease_selector button.SlowMo {
+	background-position: 83.3% 96.5%;
+}
+.ease_visualizer .ease_selector .other button.SlowMo {
+	background-position: 83.3% 99%;
+}
+.ease_visualizer .ease_selector button.SteppedEase {
+	background-position: 100% 96.5%;
+}
+.ease_visualizer .ease_selector .other button.SteppedEase {
+	background-position: 100% 99%;
+}

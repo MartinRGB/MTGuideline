@@ -3818,3 +3818,16 @@ Slides Index
 
 .text-slide-number {
   color: #abc; }
+
+
+/*=========================================
+Custom
+=========================================== */
+
+.caption{
+  margin-top: 12px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.6;
+  font-weight: 400;
+}
