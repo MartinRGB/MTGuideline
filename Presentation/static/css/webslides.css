@@ -1480,7 +1480,9 @@ section,
     section,
     .slide {
       padding-bottom: 12rem;
-      padding-top: 12rem; } }
+      padding-top: 4rem;
+      /* padding-top: 12rem; */
+    } } 
 
 /*slide with no padding (full card, .embed youtube video...) */
 .fullscreen {

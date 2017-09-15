@@ -29,6 +29,9 @@
 
     <!-- Optional - CSS SVG Icons (Font Awesome) -->
     <link rel="stylesheet" type="text/css" media="all" href="../static/css/svg-icons.css">
+
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     
     <!-- SOCIAL CARDS (ADD YOUR INFO) -->
 
@@ -120,7 +123,7 @@
             <hr>
             <ol class="text-cols">
               <li><a href="#slide=4">Easing - 缓动</a></li>
-              <li><a href="#slide=9">Spring - 弹性</a></li>
+              <li><a href="#slide=20">Spring - 弹性</a></li>
               <li><a href="#slide=16">Real-time Interaction - 实时交互</a></li>
               <li><a href="#slide=22">iOS Animation - iOS 动画</a></li>
               <li><a href="#slide=28">Android Animation - 安卓动画</a></li>
@@ -151,7 +154,7 @@
                   </a>
               </li>
               <li>
-                <a href="#slide=10">
+                <a href="#slide=13">
                 <div>
                   <h2><span>三次贝塞尔</span>设计常用</h2>
                   AE 和一些时间轴类动画工具中广泛使用<br>
@@ -175,41 +178,51 @@
             </div>
 
             <div class="content-right">
-                <!-- <p>We are digital people by nature. When we develop a vision, it is based on knowledge, research and experience. Those images are for demo purposes only.</p> -->
-              
-                <!-- <div class="ease-visualizer" data-ease="Power2.easeOut"></div>
-                <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
-                <script src='http://ow94977o5.bkt.clouddn.com/jquery.min.js'></script>
-                <script src='http://ow94977o5.bkt.clouddn.com/CustomEase.min.js'></script>
-                <script src='http://ow94977o5.bkt.clouddn.com/MorphSVGPlugin.min.js'></script>
-                <script src="../static/GSAP/js/index.js"></script> -->
                 <iframe id="serviceFrameSend" src="../static/GSAP/index.html" width="400" height="700"  frameborder="0"></iframe>
                 <p class="caption aligncenter" style="font-size: 12px; margin-top: -20px;">GSAP Easing Library</p>
             </div>
-            <!-- end .content-left -->
-
-            <!-- end .content-left -->
-            <!-- <ul class="flexblock zoomIn">
-              <li>
-                <div>
-                  <img class="blacklogo" src="../static/images/logos/google.svg" alt="Google">
-                </div>
-              </li>
-              <li>
-                <div>
-                  <img class="blacklogo" src="../static/images/logos/netflix.svg" alt="Netflix">
-                </div>
-              </li>
-              <li>
-                <div>
-                  <img class="blacklogo" src="../static/images/logos/instagram.svg" alt="Instagram">
-                </div>
-              </li>
-            </ul> -->
           </div>
-          <!-- .end .wrap -->
         </section>
         
+        <section class="aligncenter">
+            <div class="wrap size-50">
+              <pre><code class="javascript">function noEasing (t, b, c, d) {
+                return c * t / d + b;
+              }</code></pre>
+              <p class="caption aligncenter" style="margin-bottom: 0px;line-height: 20px; text-align: left;">@t is the current time (or position) of the tween. This can be seconds or frames, steps, seconds, ms, whatever – as long as the unit is the same as is used for the total time [3].</p>
+              <p class="caption aligncenter" style="margin-bottom: 0px;line-height: 20px; text-align: left;">@b is the beginning value of the property.</p>
+              <p class="caption aligncenter" style="margin-bottom: 0px;line-height: 20px; text-align: left;">@c is the change between the beginning and destination value of the property.</p>
+              <p class="caption aligncenter" style="margin-bottom: 0px;line-height: 20px; text-align: left;">@d is the total time of the tween.</p>
+               <img src="../static/media/easing-graph.png"></img>
+               <p class="caption aligncenter" style="margin-top: -20px;line-height: 20px;">Cubic-EaseIn in Grapher</p>
+            </div>
+
+        </section>
+
+        <section class="aligncenter">
+            <div class="wrap size-50">
+              <pre><code class="javascript" style="font-size:12px;     white-space: pre;">EasingFunctions = {
+  linear: function (t) { return t },
+  easeInQuad: function (t) { return t*t },
+  easeOutQuad: function (t) { return t*(2-t) },
+  easeInOutQuad: function (t) { return t<.5 ? 2*t*t : -1+(4-2*t)*t },
+  easeInCubic: function (t) { return t*t*t },
+  easeOutCubic: function (t) { return (--t)*t*t+1 },
+  easeInOutCubic: function (t) { return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1 },
+  easeInQuart: function (t) { return t*t*t*t },
+  easeOutQuart: function (t) { return 1-(--t)*t*t*t },
+  easeInOutQuart: function (t) { return t<.5 ? 8*t*t*t*t : 1-8*(--t)*t*t*t },
+  easeInQuint: function (t) { return t*t*t*t*t },
+  easeOutQuint: function (t) { return 1+(--t)*t*t*t*t },
+  easeInOutQuint: function (t) { return t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t }
+}</code></pre>
+<a target="_blank" href="http://greweb.me/2012/02/bezier-curve-based-easing-functions-from-concept-to-implementation/"><p class="caption aligncenter" style="margin-top: 20px;line-height: 20px;">Bezier Curve based easing functions – from concept to implementation</p></a>
+            </div>
+            
+          
+
+        </section>
+
         <section class="aligncenter">
             <div class="wrap size-50">
               <img src="https://cdn.dribbble.com/users/43066/screenshots/3109618/principleeasingreference4_final.gif" alt="Screenshot">
@@ -225,6 +238,15 @@
             </div>
             <!-- .end .wrap -->
         </section>
+
+        <section class="aligncenter">
+          <div class="wrap size-50">
+            <img src="../static/media/rapidinterpolator.gif" alt="Screenshot">
+            <p class="caption aligncenter">Rapid Interpolator: developed by MartinRGB</p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
 
         <section>
             <h3 class="content-center" style="margin-bottom:20px;">常用工具</h3>
@@ -246,9 +268,9 @@
                       <span style="font-size: 26px;">原生动画插值器</span>
                     </a>
                 </li>
-                <li> Android 
-                    <a target="_blank" href="https://github.com/MartinRGB/RapidInterpolator">
-                      <span style="font-size: 26px;">Rapid Interpolator</span>
+                <li> 理论 
+                    <a target="_blank" href="http://robertpenner.com/easing/">
+                      <span style="font-size: 26px;">Robert Penner</span>
                     </a>
                 </li>
                 <li> iOS 
@@ -301,59 +323,95 @@
               </div>
             </section>
 
+            <section class="aligncenter">
+                <div class="wrap size-50">
+                  <h3 class="content-center" style="margin-bottom:20px;">AE 获取方法</h3>
+                  <img src="../static/media/cubicbezier1.png"></img>
+                  <p class="caption aligncenter" style="margin-top: -20px;line-height: 20px;">粗略计算</p>
+                  <img src="../static/media/cubicbezier2.png"></img>
+                  <a target="_blank" href ="../static/media/GetBezier.jsx"><p class="caption aligncenter" style="margin-top: -20px;line-height: 20px;">Get Bezier</p></a>
+                  
+                </div>
+    
+            </section>
+
+            <section class="aligncenter">
+                <div class="wrap size-50">
+                  <img src="../static/media/bezier01.gif" alt="Screenshot">
+                  <p class="caption aligncenter">Bezier Curve: designed by Brent Clouse</p>
+                </div>
+                <!-- .end .wrap -->
+              </section>
+
+
         <section>
-          <div class="wrap">
-            <h3>一些案例</h3>
-            <ul class="flexblock steps">
-              <!-- li>a? Add blink = <ul class="flexblock steps blink">-->
+            <div class="wrap size-50">
+                <img src="../static/media/bezier03.gif" alt="Screenshot">
+              </div>
+              <p class="caption aligncenter">Side bar concept from dribbble</p>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+
+            <div class="wrap size-50">
+              <img src="../static/media/bezier04.gif" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+            </div>
+
+            <p class="caption aligncenter">开发尝试</p>
+
+        </section>
+
+        <section>
+            
+            <div class="wrap size-50">
+              <img src="../static/media/bezier05.png" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+            </div>
+            <p class="caption aligncenter">原理</p>
+            
+        </section>
+
+
+        <section>
+            <div class="wrap aligncenter fadeInUp">
+              <h2><strong>弹性</strong></h2>
+            </div>
+            <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-primary">
+         <div class="wrap">
+            <h1>缓动动画一般通过<strong>两种</strong>数学原理实现</h1>
+            <ul class="flexblock features fadeInUp">
               <li>
-                <span>
-                  <svg class="fa-heartbeat">
-                    <use xlink:href="#fa-heartbeat"></use>
-                  </svg>
-                </span>
-                <h2>01. Passion</h2>
-                <p>When you're really passionate about your job, you can change the world.</p>
+                  <a href="#slide=6">
+                  <div>
+                      <h2><span>缓动函数</span>开发常用</h2>
+                      快速实现动画效果，方便开发复用。
+                  </div>
+                  </a>
               </li>
               <li>
-                <div class="process step-2"></div>
-                <span>
-                  <svg class="fa-magic">
-                    <use xlink:href="#fa-magic"></use>
-                  </svg>
-                </span>
-                <h2>02. Purpose</h2>
-                <p>Why does this business exist? How are you different? Why matters?</p>
-              </li>
-              <li>
-                <div class="process step-3"></div>
-                <span>
-                  <svg class="fa-balance-scale">
-                    <use xlink:href="#fa-balance-scale"></use>
-                  </svg>
-                </span>
-                <h2>03. Principles</h2>
-                <p>Leadership through openness, empathy, usefulness, and good taste.</p>
-              </li>
-              <li>
-                <div class="process step-4"></div>
-                <span>
-                  <svg class="fa-cog">
-                    <use xlink:href="#fa-cog"></use>
-                  </svg>
-                </span>
-                <h2>04. Process</h2>
-                <ul>
-                  <li>Useful</li>
-                  <li>Easy</li>
-                  <li>Fast</li>
-                  <li>Beautiful</li>
-                </ul>
+                <a href="#slide=13">
+                <div>
+                  <h2><span>三次贝塞尔</span>设计常用</h2>
+                  AE 和一些时间轴类动画工具中广泛使用<br>
+                  开发中常作为稍进阶动画的存在
+                </div>
+                </a>
               </li>
             </ul>
           </div>
           <!-- .end .wrap -->
         </section>
+
+
+
+
+
+
+
+        
         <section class="aligncenter">
           <!-- Overlay/Opacity: [class*="bg-"] > .background.dark or .light -->
           <span class="background" style="background-image:url('https://source.unsplash.com/xxeAftHHq6E/')"></span>
@@ -1929,6 +1987,8 @@
 
     <!-- Required -->
     <script src="../static/js/webslides.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <!-- <link rel="stylesheet"href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script> -->
