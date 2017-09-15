@@ -1321,7 +1321,7 @@ header,
   top: auto; }
 
 header[role='banner'] {
-  padding:1.2em 1.2em;
+  padding:.6em .6em;;
   opacity: 0; 
 }
 header[role='banner'] .activate {
@@ -1537,7 +1537,7 @@ form[class*='bg-'] {
       clear: both; }
   .content-left {
     float: left; 
-    margin-top: 26vh;
+    margin-top: 20vh;
   }
   .content-right {
     float: right; }
