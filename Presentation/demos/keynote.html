@@ -649,9 +649,11 @@ function rk4(x, v, a, dt) {
     
                 <div class="content-right" style="top:5vh;">
                   <iframe width="288" height="512" frameborder="0" src="https://www.shadertoy.com/embed/XdXcWf?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
-                  <p class="caption aligncenter" style="font-size: 12px !important;">Two Pass Blur</p>
+                  <p class="caption aligncenter" id="#blur" style="font-size: 12px !important;">Two Pass Blur</p>
                 </div>
               </div>
+
+              <script>document.getElementById('blur').contentWindow.location.reload(true);</script>
             </section>
 
       <section>
@@ -814,10 +816,12 @@ function rk4(x, v, a, dt) {
       <section class="aligncenter" style="background: white;">
           <!-- Overlay/Opacity: [class*="bg-"] > .background.dark or .light -->
 
-          <iframe class="background fadeIn" id="serviceFrameSend" style="
+          <iframe class="background fadeIn" id="#gallery" style="
           width: 100%;
           height: 100%;
       " src="http://www.martinrgb.com/OpenGL_Online_Notes/laboratory/glslGallery/index.html"frameborder="0"></iframe>
+
+      <script>document.getElementById('gallery').contentWindow.location.reload(true);</script>
     </section>
 
     <section>
