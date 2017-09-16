@@ -3837,3 +3837,7 @@ Custom
   opacity: 0.6;
   font-weight: 400;
 }
+
+.framerJS body{
+  background:transparent !important;
+}

@@ -84,13 +84,12 @@
     <main role="main">
       <article id="webslides">
 
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap aligncenter fadeInUp">
-            <p class="text-subtitle">Motion Theory in actual project</p>
-            <h2>交互动画的内部原理和对接实践</h2>
-          </div>
-          <!-- .end .wrap -->
+        <section class="fullscreen bg-black aligncenter">
+            <span class="background dark" style="background-image:url('../static/media/intro.jpg')"></span>
+            <div class="wrap aligncenter fadeInUp">
+                <p class="text-subtitle">Motion Theory in actual project</p>
+                <h2>动画的内部原理和对接实践</h2>
+              </div>
         </section>
         <section>
           <!--.wrap = container (width: 90%) -->
@@ -119,27 +118,27 @@
         <section>
           <div class="wrap size-50">
             <h3>目录</h3>
-            <p>通过交互式案例，理解设备内部效果的原理。</p>
+            <p>通过交互式案例，理解设备内部效果的原理。<br> 篇幅原因，加之需要结合实际代码分析，3、4、5 暂时省略</p>
             <hr>
             <ol class="text-cols">
               <li><a href="#slide=4">Easing - 缓动</a></li>
               <li><a href="#slide=20">Spring - 弹性</a></li>
-              <li><a href="#slide=16">Real-time Interaction - 实时交互</a></li>
-              <li><a href="#slide=22">iOS Animation - iOS 动画</a></li>
-              <li><a href="#slide=28">Android Animation - 安卓动画</a></li>
-              <li><a href="#slide=33">Graphics | OpenGL - 底层渲染</a></li>
-              <li><a href="#slide=36">Communication - 开发对接</a></li>
+              <li>Real-time Interaction - 实时交互</li>
+              <li>iOS Animation - iOS 动画</li>
+              <li>Android Animation - 安卓动画</li>
+              <li><a href="#slide=34">Graphics | OpenGL - 底层渲染</a></li>
+              <li><a href="#slide=53">Communication - 开发对接</a></li>
               <li><a href="#slide=41">Question And Answer</a></li>
             </ol>
           </div>
         </section>
 
-        <section>
-            <div class="wrap aligncenter fadeInUp">
-              <h2><strong>缓动</strong></h2>
-            </div>
-            <!-- .end .wrap -->
-        </section>
+          <section>
+              <div class="wrap aligncenter fadeInUp">
+                <h2><strong>缓动</strong></h2>
+              </div>
+              <!-- .end .wrap -->
+          </section>
 
         <section class="bg-primary">
          <div class="wrap">
@@ -338,7 +337,7 @@
             <section class="aligncenter">
                 <div class="wrap size-50">
                   <img src="../static/media/easing/bezier01.gif" alt="Screenshot">
-                  <p class="caption aligncenter">Bezier Curve: designed by Brent Clouse</p>
+                  <p class="caption aligncenter">Cubic Bezier Curve</p>
                 </div>
                 <!-- .end .wrap -->
               </section>
@@ -398,10 +397,13 @@
 
         <section class="slide-top" style="padding-bottom: 0rem;">
             <div class="wrap">
-              <div class="content-center">
-                <h2><strong>RK4</strong></h2>
-                <p>Beauty is a concept based on aesthetics which is quite subjective and cultural.</p>
+              <div class="content-center" style="
+              width: 100%;
+              max-width: 720px;">
+                  <h2><strong>RK4</strong></h2>
+                  <p style="font-size: 1.6rem;">“龙格－库塔四阶法”。已知方程导数和初值，提供更高效率的精确计算<br>弹性动画中应用 RK4 算法，速度对时间的导数就是加速度需要提供: <br> x(初始位置) v(初始速度) <strong>a(加速度,粗略 = 拉力 - 摩擦力) t(运动时间)</strong></p>
               </div>
+
 
               <iframe id="serviceFrameSend" src="../static/FramerPlayground/index.html"frameborder="0" style="
               width: 100%;
@@ -417,16 +419,466 @@
           </section>
 
 
+          <section class="aligncenter">
+              <div class="wrap size-70">
+                <pre><code class="javascript" style="font-size:12px;     height: 500px;    white-space: pre;">// Converted from Python version: http://doswa.com/2009/01/02/fourth-order-runge-kutta-numerical-integration.html
+function rk4(x, v, a, dt) {
+  // Returns final (position, velocity) array after time dt has passed.
+  //        x: initial position
+  //        v: initial velocity
+  //        a: acceleration function a(x,v,dt) (must be callable)
+  //        dt: timestep
+  var x1 = x;
+  var v1 = v;
+  var a1 = a(x1, v1, 0);
 
+  var x2 = x + 0.5*v1*dt;
+  var v2 = v + 0.5*a1*dt;
+  var a2 = a(x2, v2, dt/2);
+
+  var x3 = x + 0.5*v2*dt;
+  var v3 = v + 0.5*a2*dt;
+  var a3 = a(x3, v3, dt/2);
+
+  var x4 = x + v3*dt;
+  var v4 = v + a3*dt;
+  var a4 = a(x4, v4, dt);
+
+  var xf = x + (dt/6)*(v1 + 2*v2 + 2*v3 + v4);
+  var vf = v + (dt/6)*(a1 + 2*a2 + 2*a3 + a4);
+
+  return [xf, vf];
+}}</code></pre>
+  <a target="_blank" href="http://mtdevans.com/2013/05/fourth-order-runge-kutta-algorithm-in-javascript-with-demo/"><p class="caption aligncenter" style="margin-top: 20px;line-height: 20px;">Fourth Order Runge-Kutta Algorithm in Javascript</p></a>
+  <p class="caption aligncenter" style="margin-top: 20px;line-height: 20px;">在动画时间中，每一单位时间，都会根据上一时间的速度和位置，结合加速度来决定如何运动</p>              
+
+</div>
+
+          </section>
+
+          <section>
+              <div class="wrap size-50">
+                  <img src="../static/media/spring/rk4spring.gif" alt="Screenshot">
+                </div>
+                <p class="caption aligncenter">FramerJS - SpringEditor</p>
+            <!-- .end .wrap -->
+          </section>
+
+
+
+          <section style="padding-bottom: 0rem;">
+  
+                <iframe class="framerJS" id="serviceFrameSend" src="http://www.martinrgb.com/Framer_Proto/HTM.framer/"frameborder="0" style="
+                width: 100%;
+                max-width:720px;
+                height: 60vh;
+                max-height: 60vh;
+                margin-top: 10px;
+            "></iframe>
+  
+                <p class="caption aligncenter">FramerJS Prototype</p>
+              </div>
+              <!-- .end .wrap -->
+            </section>
+
+
+            <section class="slide-top" style="padding-bottom: 0rem;">
+                <div class="wrap">
+                  <div class="content-center" style="
+                  width: 100%;
+                  max-width: 720px;">
+                      <h2><strong>DHO</strong></h2>
+                      <p style="font-size: 1.6rem;">“阻尼简谐算法”。利用指数函数和三角函数，模拟物理效果<br><strong></strong></p>
+                  </div>
+    
+    
+                  <iframe id="serviceFrameSend" src="../static/DHO/index.html"frameborder="0" style="
+                  width: 100%;
+                  max-width:720px;
+                  height: 60vh;
+                  max-height: 60vh;
+                  margin-top: 10px;
+              "></iframe>
+    
+                  <p class="caption aligncenter">Springs developed by J Scott Smith PRO</p>
+                </div>
+                <!-- .end .wrap -->
+              </section>
+
+
+        
+              <section>
+                  <div class="wrap">
+                    <!-- <div class="content-left">
+                      <h2>关注属性的变化量和变化时间的关系</h2>
+                    </div> -->
+                    <div class="content-left">
+                        <img src="../static/media/spring/dhoexp.png"></img>
+                        <p class="caption aligncenter" style="font-size: 12px; margin-top: -20px;">EXP</p>
+   
+                    </div>
+        
+                    <div class="content-right" style="
+                    margin-top: 20vh;
+                    padding-left: 0rem;
+                ">
+                        <img src="../static/media/spring/dhosin.png"></img>
+                        <p class="caption aligncenter" style="font-size: 12px; margin-top: -20px;">SIN</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section>
+                    
+                    <div class="wrap size-50">
+                      <img src="../static/media/spring/dhofinal.png" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+                    </div>
+                    <p class="caption aligncenter">最终结果</p>
+                    
+                </section>
+
+                <section>
+                    
+                    <div class="wrap size-30">
+                      <img src="../static/media/spring/dropinmotion.png" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+                    </div>
+                    <a target="_blank" href ="../static/media/spring/DropInMotion-Desktop.app">
+                      <p class="caption aligncenter">Drop-In-Motion DHO Exp</p>
+                    </a>
+                </section>
+
+
+                <section>
+                    
+                    <div class="wrap size-50">
+                      <img src="../static/media/spring/rebound_springy.gif" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+                    </div>
+                      <p class="caption aligncenter">Springy Facebook Rebound</p>
+                </section>
+
+
+                <section>
+
+                    <video controls style="
+                    width: 100%;
+                    margin: 0 auto;
+                    max-width: 280px;
+                    height:496px;
+                    background:black;
+                ">
+                        <source src="../static/media/spring/paper_by_facebook.mp4" type="video/mp4">
+                    </video>
+                      <p class="caption aligncenter">Paper by Facebook</p>
+              </section>
+
+
+          <section>
+              <div class="wrap aligncenter fadeInUp">
+                <h2><strong>iOS 动画</strong></h2>
+              </div>
+          </section>
+
+          <section>
+              <div class="wrap aligncenter fadeInUp">
+                <h2><strong>Android 动画</strong></h2>
+              </div>
+          </section>
+
+          <section>
+              <div class="wrap aligncenter fadeInUp">
+                <h2><strong>底层与渲染</strong></h2>
+              </div>
+          </section>
+
+          <section>
+              <div class="wrap">
+                <h3>CPU 与 GPU</h3>
+                <ul class="flexblock gallery">
+                  <li>
+                    <a href="#">
+                      <figure>
+                        <div style="
+                        height: 320px;
+                        background: white;
+                    ">
+                        <img style="
+                        top: 100px;
+                        position: absolute;
+                    " alt="Thumbnail " src="../static/media/Rendering/cpu.jpg">
+                        </div>
+                        <figcaption>
+                          <h2>CPU 串行计算（软件渲染）</h2>
+                          <p>各个平台制定了相对易用的动画系统，一般非实时绘制，功耗较低，但无法满足高级效果</p>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <figure>
+                          <div style="
+                          height: 320px;
+                          background: white;
+                      ">
+                        <img alt="Thumbnail" src="../static/media/Rendering/gpu.jpg">
+                          </div>
+                        <figcaption>
+                          <h2>GPU 并行计算（硬件渲染）</h2>
+                          <p>一般实时绘制，与硬件交互中层级最低，需要在数学、优化上下大功夫</p>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- .end .wrap -->
+            </section>
+
+
+
+          
+          <section>
+              <div class="wrap">
+                <!-- <div class="content-left">
+                  <h2>关注属性的变化量和变化时间的关系</h2>
+                </div> -->
+                <div class="content-left">
+                  <h1><strong>模糊</strong></h1>  
+                  <h3>像素权重按<strong>中心最大，边缘递减</strong>的规律<strong>卷积权重累加</strong></h3>
+                </div>
+    
+                <div class="content-right" style="top:5vh;">
+                  <iframe width="288" height="512" frameborder="0" src="https://www.shadertoy.com/embed/XdXcWf?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+                  <p class="caption aligncenter" style="font-size: 12px !important;">Two Pass Blur</p>
+                </div>
+              </div>
+            </section>
+
+      <section>
+          
+          <div class="wrap size-50">
+            <img src="../static/media/Rendering/Blurfunction.png" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+          </div>
+            <p class="caption aligncenter">高斯模糊核心公式</p>
+      </section>
+
+      <section>
+          
+          <div class="wrap size-50">
+            <img src="../static/media/Rendering/blurconcept.png" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+          </div>
+            <p class="caption aligncenter">two pass blur theory</p>
+      </section>
+
+      <section>
+          
+          <div class="wrap size-50">
+            <img src="../static/media/Rendering/iosblur.gif" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+          </div>
+            <p class="caption aligncenter">iMessage Blur</p>
+      </section>
+
+      <section>
+          <div class="wrap">
+            <!-- <div class="content-left">
+              <h2>关注属性的变化量和变化时间的关系</h2>
+            </div> -->
+            <div class="content-left">
+              <h1><strong>简单光照</strong></h1>  
+              <h3>光源位置 在指定材质上，根据于眼睛的位置关系，形成效果</h3>
+            </div>
+
+            <div class="content-right" style="top:10vh;">
+              
+                <iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/4llcR2?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+              <p class="caption aligncenter" style="font-size: 12px !important;">BRDF Microfacet Sampling by culdevu</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+            
+            <div class="wrap size-50">
+              <img src="../static/media/Rendering/lightconcept1.png" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+            </div>
+              <p class="caption aligncenter">三种光</p>
+        </section>
+
+        <section>
+            
+            <div class="wrap size-50">
+              <img src="../static/media/Rendering/lightconcept2.png" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+            </div>
+              <p class="caption aligncenter">眼睛的注视角度影响光效</p>
+        </section>
+
+        <section>
+            
+            <div class="wrap size-50">
+              <img src="../static/media/Rendering/lightconcept3.png" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+            </div>
+              <p class="caption aligncenter">BRDF双向反射分布模型</p>
+        </section>
+
+        <section>
+            
+            <div class="wrap size-50">
+              <img src="../static/media/Rendering/mslight.gif" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+            </div>
+              <p class="caption aligncenter">Fluent Design System Lighting</p>
+        </section>
+
+        <section>
+            
+            <div class="wrap size-50">
+              <img src="../static/media/Rendering/ios11siri.gif" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+            </div>
+              <p class="caption aligncenter">iOS Siri Effect</p>
+        </section>
+
+
+
+        <section class="slide-top" style="padding-bottom: 0rem;">
+            <div class="wrap">
+              <div class="content-center" style="
+              width: 100%;
+              max-width: 720px;">
+                  <h2><strong>模型导入</strong></h2>
+                  <p style="font-size: 1.6rem;">游戏、3D UI、场景构建</p>
+                  <video controls style="
+                  width: 100%;
+                  max-width:720px;
+                  height: 50vh;
+                  max-height: 60vh;
+                  margin-top: 10px;
+                  background:black;
+              ">
+                      <source src="../static/media/Rendering/Cinder_Android.mp4" type="video/mp4">
+                  </video>
+                    <p class="caption aligncenter" style="font-size: 12px; margin-top: -20px;">Model & IBL</p>
+              </div>
+
+
+
+            </div>
+            <!-- .end .wrap -->
+          </section>
+
+          <section>
+              <div class="wrap">
+                <!-- <div class="content-left">
+                  <h2>关注属性的变化量和变化时间的关系</h2>
+                </div> -->
+                <div class="content-left" style="
+                margin-top: 10vh;
+                padding-left: 0rem;
+            ">
+                    <img style ="    margin: 0 auto;
+                    display: block;"src="../static/media/rendering/pixel0.gif"></img>
+                    <p class="caption aligncenter" style="font-size: 12px; margin-top:0px;">Half Dome</p>
+
+                </div>
+    
+                <div class="content-right" style="
+                margin-top: 10vh;
+                padding-left: 0rem;
+            ">
+                    <img style ="    margin: 0 auto;
+                    display: block;"src="../static/media/rendering/pixel1.gif"></img>
+                    <p class="caption aligncenter" style="font-size: 12px; margin-top:0px;">Shinjuku,Tokyo</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="bg-apple aligncenter">
+                <div class="wrap">
+                  <div class="cta">
+                    <div class="number">
+                      <p><span style="font-size:8rem;">Shader</span></p>
+                    </div>
+                    <!--end .number -->
+                    <div class="benefit">
+                      <h3 style="font-size:3.8rem;"><strong>在动画上几乎没有限制</strong>.</h3>
+                      <p>只要优化得当，会得到极致的效果</p>
+                      <p>图形、渲染加速、动画、交互</p>
+                    </div>
+                    <!--end .benefit -->
+                  </div>
+                  <!--end .cta -->
+                </div>
+                <!-- .end .wrap -->
+              </section>
+
+
+
+      <section class="aligncenter" style="background: white;">
+          <!-- Overlay/Opacity: [class*="bg-"] > .background.dark or .light -->
+
+          <iframe class="background fadeIn" id="serviceFrameSend" style="
+          width: 100%;
+          height: 100%;
+      " src="http://www.martinrgb.com/OpenGL_Online_Notes/laboratory/glslGallery/index.html"frameborder="0"></iframe>
+    </section>
+
+    <section>
+        <video controls style="
+        width: 100%;
+        margin: 0 auto;
+        max-width: 280px;
+        height:496px;
+        background:black;
+    ">
+            <source src="../static/media/rendering/wallpaper.mp4" type="video/mp4">
+        </video>
+          <p class="caption aligncenter" >Live Wallpaper Exp</p>
+    </section>
+
+    <section>
+        <video controls style="
+        width: 100%;
+        margin: 0 auto;
+        max-width: 280px;
+        height:496px;
+        background:black;
+    ">
+            <source src="../static/media/rendering/morning_routine.mp4" type="video/mp4">
+        </video>
+          <p class="caption aligncenter" >Morning Routine</p>
+    </section>
+
+    <section>
+
+        <div class="wrap size-50">
+            <img src="../static/media/rendering/gs8.gif" style="/* margin:0 auto */display: block;position: relative;margin: 0 auto;" alt="Screenshot">
+          </div>
+          <p class="caption aligncenter">Galaxy S8</p>
+    </section>
+
+
+          <section>
+              <div class="wrap aligncenter fadeInUp">
+                <h2><strong>开发对接</strong></h2>
+              </div>
+          </section>
 
         
         <section class="aligncenter">
           <!-- Overlay/Opacity: [class*="bg-"] > .background.dark or .light -->
           <span class="background" style="background-image:url('https://source.unsplash.com/xxeAftHHq6E/')"></span>
           <div class="wrap">
-            <h2 class="text-landing"><strong>Covers</strong></h2>
+            <h2 class="text-landing"><strong>Q & A</strong></h2>
           </div>
         </section>
+
+        <section class="bg-black">
+            <div class="wrap aligncenter zoomIn">
+                <h2>谢谢观看</h2>
+            </div>
+            <!-- .end .wrap -->
+        </section>
+
+
+
         <section class="bg-black-blue">
           <span class="background dark" style="background-image:url('https://source.unsplash.com/LW3FskrgQ9M/')"></span>
           <div class="wrap size-50">
