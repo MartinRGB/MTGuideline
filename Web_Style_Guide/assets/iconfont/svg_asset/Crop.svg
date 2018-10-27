@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Crop</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SVG-Icon" transform="translate(-98.000000, -222.000000)" fill="#FFFFFF">
+            <g id="Crop" transform="translate(93.000000, 217.000000)">
+                <path d="M8.18181818,15.1821364 L8.18181818,9.45486364 L6.90909091,9.45486364 L6.90909091,15.1821364 C6.90909091,15.8840455 7.47990909,16.4548636 8.18181818,16.4548636 L19,16.4548636 L19,15.1821364 L8.18181818,15.1821364 Z M15.8181818,14.5457727 L17.0909091,14.5457727 L17.0909091,8.8185 C17.0909091,8.11722727 16.5200909,7.54577273 15.8181818,7.54577273 L5,7.54577273 L5,8.8185 L15.8181818,8.8185 L15.8181818,14.5457727 Z M8.18181818,5 L6.90909091,5 L6.90909091,6.90909091 L8.18181818,6.90909091 L8.18181818,5 Z M15.8181818,19 L17.0909091,19 L17.0909091,17.0909091 L15.8181818,17.0909091 L15.8181818,19 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

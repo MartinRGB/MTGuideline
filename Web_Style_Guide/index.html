@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="fav.ico">
+	<link rel="stylesheet" href="./css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="./css/style-guide.css"> <!-- Resource style -->
+	<script src="./js/modernizr.js"></script> <!-- Modernizr -->
+
+	<title>样式指南 Template</title>
+</head>
+<body>
+	<header>
+		<!-- <div class="cd-logo"><img src="assets/logo.svg" alt="Logo"></div> -->
+
+		<nav>
+			<ul class="cd-main-nav">
+				<!-- <li><a href="#branding">品牌</a></li> -->
+				<li><a href="#colors">颜色</a></li>
+				<li><a href="#typography">字体</a></li>
+				<li><a href="#buttons">按钮</a></li>
+				<li><a href="#icons">图标</a></li>
+				<li><a href="#form">表格</a></li>
+				<li><a href="#animation">动画</a></li>
+				<li><a href="#component">组件</a></li>
+				<li><a href="#illustration">插画</a></li>
+			</ul> <!-- cd-main-nav -->
+		</nav>
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+	</header>
+
+	<main>
+		<div class="modal-bg" id="close-modal1">
+			<div class="modal-container">
+				<div class="modal-head">
+					<div class="modal-title">你确定要这么做吗？</div>
+					<div class="modal-close" id="close-modal2"></div>
+				</div>
+				<div class="modal-bottom">
+					<div class="modal-content">要将「明朝散发弄扁舟」该篇文章删除吗，删除后原文章链接将无法访问。</div>
+					<div class="modal-bottom-btn">
+						<button class="btn btn-cancel modal-btn-layout" id="close-modal4">取消</button>
+						<button class="btn btn-delete modal-btn-layout" id="close-modal3">删除</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h1 class="guide_title">Web <span>样式指南</span> 1.0</h1>
+
+		<!-- <section id="branding" class="cd-branding">
+			<h2>品牌</h2>
+
+			<ul>
+				<li class="cd-box"><div class="bg_white"><div class="logo_dark" alt="Logo Dark"></div></div></li>
+				<li class="cd-box"><div class="bg_dark"><div class="logo_white" alt="Logo White"></div></div></li>
+			</ul>
+
+			<ul>
+				<li><img src="assets/branding/Logo_White_128.svg" alt="Touch Icon White"></li>
+				<li><img src="assets/branding/Logo_Dark_128.svg" alt="Touch Icon Black"></li>
+			</ul>
+		</section> -->
+
+		<section id="colors" class="cd-colors">
+			<h2>颜色</h2>
+
+			<ul>
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">正文链接 - link-blue</b><b class="color-class">选中滑块 - slider-selected</b><b class="color-class">召唤按钮 - button-blue</b>
+				</li>
+
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">品牌 - zi-ink</b><b class="color-class">标题 - title-ink</b><b class="color-class">链接激活 - active-ink</b>
+				</li>
+
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">文本链接 - link-ink</b>
+				</li>
+
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">图标链接 - icon-ink</b><b class="color-class">次级信息 - 2nd-info-ink</b>
+				</li>
+
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">分割线 - divide-ink</b><b class="color-class">不可选 - disabled-ink</b><b class="color-class">占位符 - placeholder-ink</b>
+				</li>
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">正文 - text-ink</b>
+				</li>
+
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">底部栏 - footer-ink</b><b class="color-class">滑块常态 - slider-normal</b><b class="color-class"></b>
+				</li>
+
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">成功 - success-green</b>
+				</li>
+
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">删除按钮 - delete-red</b><b class="color-class">白噪音 - harmony-red</b><b class="color-class">警告 - alert-red</b>
+				</li>
+
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">草稿 - draft-red</b>
+				</li>
+
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">容器底色 - container-bg</b>
+				</li>
+
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">浅色背景 - lighter-bg</b><b class="color-class">顶部导航 - nav-bg</b>
+				</li>
+
+				<li class="cd-box">
+					<div class="cd-color-swatch"></div>
+					<b class="color-class">深色背景 - darker-bg</b>
+				</li>
+			</ul>
+		</section>
+
+		<section id="typography" class="cd-typography">
+			<h2>字体</h2>
+
+			<div class="cd-box">
+				<div class="font_title_before"><h1 class="font_title font-fzyansong-title">方正颜宋</h1></div>
+				<h1 class="font_area font-fzyansong-regular">产品标语<span></span></h1>
+				<h1 class="font_area font-fzyansong-light">区块标题<span></span></h1>
+				<h1 class="font_area font-fzyansong-light2">编辑模式<span></span></h1>
+				<h1 class="font_area font-fzyansong-light3">草稿<span></span></h1>
+				<div class="font_title_before"><h1 class="font_title font-montserrat-title">Montserrat</h1></div>
+				<h1 class="font_area font-montserrat-regular">Lorem ipsum<span></span></h1>
+				<div class="font_title_before"><h1 class="font_title font-hyqihei-title">汉仪旗黑</h1></div>
+				<h1 class="font_area font-hyqihei-25">头图标题<span></span></h1>
+				<h1 class="font_area font-hyqihei-60">重要标题&链接<span></span></h1>
+				<h1 class="font_area font-hyqihei-55">可读正文<span></span></h1>
+				<h1 class="font_area font-hyqihei-75">按钮中字体<span></span></h1>
+				<div class="font_title_before"><h1 class="font_title font-system-title">系统字体</h1></div>
+				<h1 class="font_area font-system-400">编辑器标题占位符<span></span></h1>
+				<h1 class="font_area font-system-200-2">用户个人资料<span></span></h1>
+				<h1 class="font_area font-system-200">编辑器正文占位符<span></span></h1>
+				<div class="font_title_before"><h1 class="font_title font-hyqihei-title">正文示范</h1></div>
+				<p class="font-body">只要文档以足够「语意化」的结构保存，便可以利用 CSS 规则呈现不同的样貌，让排版引擎遵守。在新的写作平台研发的过程中，我们解决了很多关键性的问题。<a href="#0">听听我们工程师的想法</a>。「新的写作平台」，和其他阅读类和写作类 APP 有本质的不同,我们欣赏中文的意蕴，提供最优美的中文字体。</p>
+			</div>
+		</section>
+
+		<section id="buttons" class="cd-buttons">
+			<h2>按钮</h2>
+
+			<div class="cd-box">
+				<div class="btn-box"><button class="btn btn-blue">提交资料</button><span id="buttons-tips">品牌 | 行为召唤</span></div>
+				<div class="btn-box"><button class="btn btn-branding">App Store<div class="icon-Apple"></div></button><span id="buttons-tips">品牌 | 登陆页按钮</span></div>
+				<div class="btn-box"><button class="btn btn-delete">删除</button><span id="buttons-tips">删除</span></div>
+				<div class="btn-box"><button class="btn btn-login">登录</button><span id="buttons-tips">导航栏 | 幽灵按钮</span></div>
+				<div class="btn-box"><button class="btn btn-article-preview">预览</button><span id="buttons-tips">白色背景 | 幽灵按钮</span></div>
+				<div class="btn-box"><button class="btn btn-cancel">取消</button><span id="buttons-tips">模态窗口 | 取消</span></div>
+				<div class="btn-box"><button class="btn btn-template-preview">预览</button><span id="buttons-tips">黑色背景 | 幽灵按钮</span></div>
+				<div class="btn-box"></div>
+				<div class="btn-box"></div>
+
+			</div>
+
+		</section>
+
+		<section id="icons" class="cd-icons">
+			<h2>图标</h2>
+
+			<ul class="cd-box">
+				<li class="icon-SendVerify"></li>
+				<li class="icon-Right"></li>
+				<li class="icon-Wrong"></li>
+				<li class="icon-Dial"></li>
+				<li class="icon-Recycle"></li>
+				<li class="icon-Camera"></li>
+				<li class="icon-Weibo"></li>
+				<li class="icon-Wechat"></li>
+				<li class="icon-Apple"></li>
+				<li class="icon-Mail"></li>
+				<li class="icon-Copy"></li>
+				<li class="icon-AddArticle"></li>
+				<li class="icon-More"></li>
+				<li class="icon-Share"></li>
+				<li class="icon-Draft"></li>
+				<li class="icon-Publish"></li>
+				<li class="icon-SmashnEmpty"></li>
+				<li class="icon-Edit"></li>
+				<li class="icon-Delete"></li>
+				<li class="icon-Share2"></li>
+				<li class="icon-WhiteNoise"></li>
+				<li class="icon-iMac"></li>
+				<li class="icon-iPhone"></li>
+				<li class="icon-AddMedia"></li>
+				<li class="icon-Bird"></li>
+				<li class="icon-Rain"></li>
+				<li class="icon-Waterfall"></li>
+				<li class="icon-Wind"></li>
+				<li class="icon-Heart"></li>
+				<li class="icon-DeleteImage"></li>
+				<li class="icon-Note"></li>
+				<li class="icon-Crop"></li>
+				<li class="icon-Replace"></li>
+				<li class="icon-Preview"></li>
+				<li class="icon-UploadImage"></li>
+				<li class="icon-ScaleUp"></li>
+				<li class="icon-ScaleDown"></li>
+				<li class="icon-Bold"></li>
+				<li class="icon-H1"></li>
+				<li class="icon-H2"></li>
+				<li class="icon-Quote"></li>
+				<li class="icon-Link"></li>
+				<li class="icon-Dot"></li>
+				<li class="icon-Num"></li>
+				<li class="icon-Divide"></li>
+				<li class="icon-AddPicture"></li>
+				<li class="icon-Backward"></li>
+				<li class="icon-Forward"></li>
+			</ul>
+		</section>
+
+		<section id="form" class="cd-form">
+			<h2>表格</h2>
+
+			<div class="cd-box">
+				<form>
+					<fieldset>
+						<input type="text" autocomplete="off" placeholder="请输入...">
+						<div class="input-alert icon-Wrong"><input type="text" value="1235" placeholder="请输入..."></div>
+						<div class="input-success icon-Right"><input type="text" value="4079" placeholder="请输入..."></div>
+					</fieldset>
+
+					<fieldset>
+						<div class="cd-input-wrapper">
+							<input type="checkbox" id="checkbox">
+	      					<label class="checkbox-label" for="checkbox">Checkbox</label>
+      					</div>
+					</fieldset>
+				</form>
+			</div>
+			<div class="cd-box">
+				<p>&ltinput type="text"&gt</p>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">icon-alert icon-Wrong</span>"&gt&ltinput type="text"&gt&lt/div&gt</p>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">icon-success icon-Wrong</span>"&gt&ltinput type="text"&gt&lt/div&gt</p>
+				<p>&ltinput type="checkbox" id="checkbox"&gt</p>
+			</div>
+		</section>
+
+
+		<section id="animation" class="cd-animation">
+			<h2>动画</h2>
+			<div class="cd-box">
+					<span class="quote">“There isn’t one easing curve that works for absolutely everything. Crafting easing curves is a key component of designing motion.”</span>
+					<span class="animation_text">
+						动画设计相对更依赖感觉，新的写作平台的 Web 动画本质上追求一种明快清爽的运动感，而曲线使用又有所收敛,动画时间不宜超过 500ms。<br>主要使用的曲线有 5 种:
+						<span>
+							<span class="easing_label">linear</span> ,
+							<span class="easing_label">ease</span> ,
+							<span class="easing_label">easeInOut</span> ,
+							<span class="easing_label">easeOutQuint</span>,
+							<span class="easing_label">easeModal</span>,
+						</span>
+					</span>
+
+			</div>
+			<div class="cd-box">
+				<div class="animation-box">
+					<span class="easing_name">linear</span><span class="easing_bezier">cubic-bezier(0, 0, 1.0, 1.0)</span>
+					<span class="animation_text">适用于循环动画，以及体积微小元素、短时间（200ms内）动画。</span>
+					<div class="animation_container">
+						<div class="graph_container">
+							<svg class="graph_beziercurve_container">
+								<polyline class="graph_bezierline"></polyline>
+							</svg>
+						</div>
+						<div class="ball_container">
+								<div class="easing_ball"></div>
+						</div>
+					</div>
+					<button class="play_animation btn btn-article-preview">播放</button>
+				</div>
+			</div>
+			<div class="cd-box">
+				<div class="animation-box">
+					<span class="easing_name">ease</span><span class="easing_bezier">cubic-bezier(.25, .1, .25, 1.0)</span>
+					<span class="animation_text">适用于透明度动画，时间控制在 300ms 以内，并且效果不突兀。</span>
+					<div class="animation_container">
+						<div class="graph_container">
+							<svg class="graph_beziercurve_container">
+								<polyline class="graph_bezierline"></polyline>
+							</svg>
+						</div>
+						<div class="ball_container">
+								<div class="easing_ball"></div>
+						</div>
+					</div>
+					<button class="play_animation btn btn-article-preview">播放</button>
+				</div>
+			</div>
+			<div class="cd-box">
+				<div class="animation-box">
+					<span class="easing_name">easeInout</span><span class="easing_bezier">cubic-bezier(.42, 0, .58, 1.0)</span>
+					<span class="animation_text">适用于 Hover 动画，时间控制在 300ms 以内，并且效果不突兀。</span>
+					<div class="animation_container">
+						<div class="graph_container">
+							<svg class="graph_beziercurve_container">
+								<polyline class="graph_bezierline"></polyline>
+							</svg>
+						</div>
+						<div class="ball_container">
+								<div class="easing_ball"></div>
+						</div>
+					</div>
+					<button class="play_animation btn btn-article-preview">播放</button>
+				</div>
+			</div>
+			<div class="cd-box">
+				<div class="animation-box">
+					<span class="easing_name">easeOutQuint</span><span class="easing_bezier">cubic-bezier(.23, 1, .32, 1)</span>
+					<span class="animation_text">运动感明快清爽，具有品牌感，时间最好在 500ms 以上，否则过快</span>
+					<div class="animation_container">
+						<div class="graph_container">
+							<svg class="graph_beziercurve_container">
+								<polyline class="graph_bezierline"></polyline>
+							</svg>
+						</div>
+						<div class="ball_container">
+								<div class="easing_ball"></div>
+						</div>
+					</div>
+					<button class="play_animation btn btn-article-preview">播放</button>
+				</div>
+			</div>
+			<div class="cd-box">
+				<div class="animation-box">
+					<span class="easing_name">easeModal</span><span class="easing_bezier">cubic-bezier(.17,0.84,.44,1)</span>
+					<span class="animation_text">适用于模态弹窗，时间为 300ms，所有弹窗效果都应采用此曲线。</span>
+					<div class="animation_container">
+						<div class="graph_container">
+							<svg class="graph_beziercurve_container">
+								<polyline class="graph_bezierline"></polyline>
+							</svg>
+						</div>
+						<div class="ball_container">
+								<div class="easing_ball"></div>
+						</div>
+					</div>
+					<button class="play_animation btn btn-article-preview">播放</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="component" class="cd-component">
+			<h2>组件</h2>
+			<div class="cd-box">
+				<div class="effect-box">
+					<div class="aligin-box"><a href="#0" class="blue-underline-link">听听我们工程师的想法</a></div>
+					<div class="aligin-box"><a href="#0" class="ink-link">下载应用</a></div>
+					<div class="aligin-box"><a href="#0" class="grey-link">关于我们</a></div>
+					<div class="aligin-box"><a href="#0" class="blue-link">隐私条款</a></div>
+				</div>
+				<span class="component-title">文本链接</span>
+				<p>&lta class="<span style="color: #3a7bf7;">blue-underline-link</span>"&gt听听我们工程师的想法&lt/a&gt</p>
+				<p>&lta class="<span style="color: #3a7bf7;">ink-link</span>"&gt下载应用&lt/a&gt</p>
+				<p>&lta class="<span style="color: #3a7bf7;">grey-link</span>"&gt关于我们&lt/a&gt</p>
+				<p>&lta class="<span style="color: #3a7bf7;">blue-link</span>"&gt隐私条款&lt/a&gt</p>
+			</div>
+			<div class="cd-box">
+				<div class="effect-box">
+					<div class="aligin-box"><button class="btn btn-login" id="active_modal">激活</button></div>
+				</div>
+
+				<span class="component-title">模态弹窗</span>
+				<p>&ltbutton class="<span style="color: #3a7bf7;">btn btn-login</span>" id="<span style="color: #3a7bf7;">active_modal</span>"&gt激活&lt/button&gt</p>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">modal-bg</span>" id="<span style="color: #3a7bf7;">close-modal1</span>"&gt...&lt/div&gt</p>
+			</div>
+			<div class="cd-box">
+				<div class="effect-box">
+					<div class="aligin-box">
+						<a href="#0" class="dropdown-btn" id="dropdown-onClick"><span class="dropdown-title">我的文章</span><span class="dropdown-arrow"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#0" class="dropdown-name dropdown-selected">我的文章</a><span class="li-arrow"></span></li>
+							<li><a href="#0" class="dropdown-name">已发布</a><span class="li-arrow"></span></li>
+							<li><a href="#0" class="dropdown-name">草稿箱</a><span class="li-arrow"></span></li>
+							<li><a href="#0" class="dropdown-name">废纸篓</a><span class="li-arrow"></span></li>
+						</ul>
+					</div>
+				</div>
+				<span class="component-title">下拉菜单</span>
+				<p>&lta class="<span style="color: #3a7bf7;">dropdown-btn</span>" id="<span style="color: #3a7bf7;">dropdown-onClick</span>"&gt...&lt/a&gt</p>
+				<p>&ltul class="<span style="color: #3a7bf7;">dropdown-menu</span>"&gt...&lt/ul&gt</p>
+			</div>
+			<div class="cd-box">
+				<div class="effect-box">
+					<div class="aligin-box">
+						<a href="#0" class="dropdown-btn" id="dropdown-onClick2"><span class="dropdown-title">发布文章</span><span class="dropdown-arrow"></span></a>
+						<ul class="dropdown-menu2">
+							<li><span class="icon-Publish icon">发布文章</span></li>
+							<li><span class="icon-Draft icon">存为草稿</span></li>
+							<li class="dropdown-seperator"></li>
+							<li><span class="icon-Delete icon">删除文章</span></li>
+							<span class="dropdown-uparrow"></span>
+						</ul>
+					</div>
+				</div>
+				<span class="component-title">下拉菜单(箭头)</span>
+				<p>&lta class="<span style="color: #3a7bf7;">dropdown-btn</span>" id="<span style="color: #3a7bf7;">dropdown-onClick2</span>"&gt...&lt/a&gt</p>
+				<p>&ltul class="<span style="color: #3a7bf7;">dropdown-menu2</span>"&gt...&lt/ul&gt</p>
+			</div>
+			<div class="cd-box">
+				<div class="effect-box">
+					<div class="aligin-box">
+						<div class="loading-container">
+	            <div class="loading">
+	              <div class="loading-circle"></div>
+	              <div class="loading-bar"></div>
+	            </div>
+	          </div>
+					</div>
+				</div>
+				<span class="component-title">读取进度条</span>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">loading-container</span>"&gt...&lt/div&gt</p>
+			</div>
+			<div class="cd-box">
+				<div class="effect-box">
+					<div class="aligin-box">
+						<ul class="slider">
+							<li class="slider-switch"><span class="icon-Wechat"></span><span class="text-weixin">微信分享</span></li>
+							<li class=""><span class="icon-Weibo"></span><span class="text-weixin">微博分享</span></li>
+							<li class=""><span class="icon-Copy"></span><span class="text-link">链接分享</span></li>
+							<div class="slider-bar"></div>
+						</ul>
+					</div>
+				</div>
+				<span class="component-title">滑块选择</span>
+				<p>&ltul class=""<span style="color: #3a7bf7;">slider</span>"&gt<br>&nbsp&nbsp...<br>&nbsp&nbsp&ltdiv class=""<span style="color: #3a7bf7;">slider-bar</span>"&gt&lt/div&gt<br>&lt/ul&gt</p>
+			</div>
+			<div class="cd-box">
+				<div class="effect-box">
+					<div class="aligin-box">
+						<div class="hover-tips">编辑</div>
+						<a class="hover-icon icon-Edit"></a>
+					</div>
+				</div>
+				<span class="component-title">提示弹层(Hover)</span>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">hover-tips</span>"&gt编辑&lt/div&gt</p>
+				<p>&lta class="<span style="color: #3a7bf7;">hover-icon icon-Edit</span>"&gt&lt/a&gt</p>
+			</div>
+			<div class="cd-box">
+				<div class="effect-box">
+					<div class="aligin-box">
+						<div class="auto-tips">请添加头像</div>
+						<button class="btn-tips btn btn-blue">触发</button>
+					</div>
+				</div>
+				<span class="component-title">提示弹层(Auto)</span>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">auto-tips</span>"&gt请添加头像&lt/div&gt</p>
+				<p>&ltbutton class="<span style="color: #3a7bf7;">btn-tips btn btn-blue</span>"&gt触发&lt/button&gt</p>
+			</div>
+			<div class="cd-box">
+				<div class="effect-box">
+					<div class="aligin-box">
+						<div class="big-avatar"></div>
+						<div class="small-avatar"></div>
+					</div>
+				</div>
+				<span class="component-title">头像</span>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">big-avatar</span>"&gt&lt/div&gt</p>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">small-avatar</span>"&gt&lt/div&gt</p>
+			</div>
+			<div class="cd-box">
+				<div class="effect-box">
+					<div class="aligin-box">
+						<span class="backward-btn"><span class="icon-Backward"></span><span class="wards-text">返回创作中心</span></span>
+						<span class="forward-btn"><span class="wards-text">使用默认模板</span><span class="icon-Forward"></span></span>
+					</div>
+				</div>
+				<span class="component-title">前进 | 后退</span>
+				<p class="wards-p">&ltspan class="<span style="color: #3a7bf7;">backward-btn</span>"&gt&ltspan class="<span style="color: #3a7bf7;">icon-Backward</span>"&gt&lt/span&gt&ltspan class="<span style="color: #3a7bf7;">wards-text</span>"&gt返回创作中心&lt/span&gt&lt/span&gt</p>
+				<p class="wards-p">&ltspan class="<span style="color: #3a7bf7;">forward-btn</span>"&gt&ltspan class="<span style="color: #3a7bf7;">wards-text</span>"&gt使用默认模板&lt/span&gt&ltspan class="<span style="color: #3a7bf7;">icon-Forward</span>"&gt&lt/span&gt&lt/span&gt</p>
+			</div>
+			<div class="cd-box">
+				<div class="effect-box">
+					<div class="aligin-box">
+						<div class="hud-tips">请输入标题</div>
+						<button class="btn-hud btn btn-blue">触发</button>
+					</div>
+				</div>
+				<span class="component-title">编辑提示</span>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">hud-tips</span>"&gt请输入标题&lt/div&gt</p>
+			</div>
+		</section>
+
+		<section id="illustration" class="cd-illustration">
+			<h2>插画</h2>
+			<div class="cd-box">
+				<div class="illustration-image"></div>
+				<span>image by Scott Hurff</span>
+				<span>设计需考虑非理想状态，插画可在非理想状态下，填补视觉，引导用户。<br>插画用色要使用品牌色，提倡线条风格的插画。</span>
+			</div>
+			<div class="cd-box image-box">
+				<div class="illustration-image"></div>
+				<span>空状态</span>
+			</div>
+			<div class="cd-box image-box">
+				<div class="illustration-image"></div>
+				<span>错误状态</span>
+			</div>
+			<div class="cd-box image-box">
+				<div class="illustration-image"></div>
+				<span>分享激励</span>
+			</div>
+			<div class="cd-box image-box">
+				<div class="illustration-image"></div>
+				<span>分享激励</span>
+			</div>
+		</section>
+
+	</main>
+<script src="js/jquery-2.1.1.js"></script>
+<script src='js/TweenMax.min.js'></script>
+<script src='js/DrawSVGPlugin.min.js'></script>
+<script src="js/EaseGetRatio.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
